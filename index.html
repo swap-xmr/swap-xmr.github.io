@@ -1,98 +1,249 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Swap XMR to BTC, USDT &amp; LTC | Monero</title>
-<meta name="description" content="Swap XMR to BTC, USDT or LTC. Start your Monero swap, review the receive amount and network fees, then send XMR and receive crypto in your destination wallet.">
-<link rel="canonical" href="https://insert_url/">
-<meta property="og:title" content="Swap XMR to BTC, USDT &amp; LTC | Monero">
-<meta property="og:description" content="Swap Monero for Bitcoin, Tether or Litecoin. Review your XMR quote, choose the destination network and start your swap.">
-<meta property="og:url" content="https://insert_url/">
+<title>XMR Swap — Exchange Monero Without an Account</title>
+<meta name="description" content="See how an XMR Swap works through instant, non-custodial exchangers: fixed vs floating quotes, minimum amounts, refunds, and tracking by ID — no account required.">
+<link rel="canonical" href="https://swap-xmr.github.io/">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swap XMR to BTC, USDT &amp; LTC">
-<meta name="twitter:description" content="Swap Monero for Bitcoin, Tether or Litecoin. Review your XMR quote and start your swap.">
-<meta name="theme-color" content="#0b0c0d">
+<meta property="og:title" content="XMR Swap">
+<meta property="og:url" content="https://swap-xmr.github.io/">
+<meta property="og:image" content="https://swap-xmr.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="XMR Swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://swap-xmr.github.io/#website", "url": "https://swap-xmr.github.io/", "name": "XMR Swap — Exchange Monero Without an Account"}, {"@type": "WebPage", "@id": "https://swap-xmr.github.io/#webpage", "url": "https://swap-xmr.github.io/", "name": "XMR Swap — Exchange Monero Without an Account", "isPartOf": {"@id": "https://swap-xmr.github.io/#website"}, "description": "See how an XMR Swap works through instant, non-custodial exchangers: fixed vs floating quotes, minimum amounts, refunds, and tracking by ID — no account required.", "datePublished": "2026-10-10", "dateModified": "2026-10-10"}, {"@type": "SoftwareApplication", "name": "XMR Swap", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://swap-xmr.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Swaps"}, {"@type": "ListItem", "position": 3, "name": "XMR Swap"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is an XMR Swap?", "acceptedAnswer": {"@type": "Answer", "text": "An XMR Swap is a non-custodial exchange of Monero for another asset through an instant exchanger rather than a trading account. You send XMR to a one-time address and receive the output asset once the network confirms it."}}, {"@type": "Question", "name": "What is the difference between a fixed-rate and floating-rate XMR Swap?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed-rate quote locks the output amount for a short window regardless of market movement, while a floating-rate quote recalculates the output at the live rate once your deposit is detected."}}, {"@type": "Question", "name": "Is there a minimum amount for an XMR Swap?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Minimums exist because the network fee and the exchanger's float would consume the entire output on a very small trade, so deposits below the posted floor are usually held for a refund instead of swapped."}}, {"@type": "Question", "name": "How do I track an XMR Swap?", "acceptedAnswer": {"@type": "Answer", "text": "Every swap gets a unique ID the moment you request a quote. That ID opens a status page showing deposit detection, confirmations, and payout, with no account or login needed."}}, {"@type": "Question", "name": "What happens if I send too little or too much Monero?", "acceptedAnswer": {"@type": "Answer", "text": "Underpayment usually produces a smaller recalculated output rather than a cancelled trade, and overpayment is refunded to a return address you provide, or swapped in full if you skip one."}}, {"@type": "Question", "name": "Do I need to create an account for an XMR Swap?", "acceptedAnswer": {"@type": "Answer", "text": "No. The exchanger never holds a shared balance, so there is nothing to register for — the swap ID is the only reference you need."}}, {"@type": "Question", "name": "How long does an XMR Swap take?", "acceptedAnswer": {"@type": "Answer", "text": "Most of the wait is Monero's own confirmation time on your deposit; once that clears, the output is sent automatically and usually arrives within minutes."}}]}]}</script>
 <style>
-:root{color-scheme:dark;--ember:#ff6600;--chalk:#f2f0eb;--ash:#abaeaf;--seam:#303132;--slab:#141516;--code:ui-monospace,SFMono-Regular,Consolas,monospace}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:#0b0c0d;color:var(--chalk);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6}a{color:inherit;text-underline-offset:4px}a:hover{color:var(--ember)}a:focus-visible,button:focus-visible,[role=link]:focus-visible,summary:focus-visible{outline:3px solid var(--ember);outline-offset:6px}img{display:block;object-fit:contain}button{font:inherit}p{margin:0 0 16px;color:var(--ash)}h1,h2,h3{line-height:1.16;letter-spacing:-.035em;margin:0}h2{font-size:clamp(25px,4vw,34px);margin-bottom:23px}h3{font-size:19px}svg{display:block}.xmr-shell{max-width:1016px;padding:0 28px;margin:auto}.xmr-mast{min-height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--seam);gap:20px}.xmr-wordmark{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:700;font-size:18px;letter-spacing:-.04em}.xmr-wordmark img{width:30px;height:30px}.xmr-nav{display:flex;align-items:center;gap:27px;font-size:13px}.xmr-nav a{text-decoration:none}.xmr-toplink{border:1px solid #714020;padding:9px 15px;color:#ff9a57}.xmr-intro{text-align:center;padding:44px 0 26px}.xmr-overline{font:11px var(--code);letter-spacing:.13em;text-transform:uppercase;color:#b3b4b1;margin:0 0 14px}.xmr-overline span{color:var(--ember)}h1{font-size:clamp(56px,10vw,92px);font-weight:750;letter-spacing:-.07em;margin-bottom:18px}h1 span{color:var(--ember)}.xmr-lede{max-width:570px;margin:0 auto 21px;font-size:17px}.xmr-heroaction{font-size:14px;font-weight:700;text-decoration:none;border-bottom:1px solid var(--ember);padding-bottom:5px}.xmr-ticket{max-width:580px;margin:8px auto 30px;border:1px solid #62402b;background:linear-gradient(140deg,#211810 0%,#161718 36%,#111213 100%);border-radius:15px;cursor:pointer;box-shadow:0 18px 65px #0006;transition:border-color .18s,transform .18s;position:relative;overflow:hidden}.xmr-ticket:hover{border-color:var(--ember);transform:translateY(-2px)}.xmr-tickethead{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #393129;font:11px var(--code);letter-spacing:.08em}.xmr-shieldname{display:flex;align-items:center;gap:10px;color:#ff9a57}.xmr-ticketbody{padding:23px 24px}.xmr-sendrow,.xmr-receiverow{display:flex;justify-content:space-between;align-items:center;gap:16px}.xmr-coinid{display:flex;align-items:center;gap:13px}.xmr-coinid img{width:40px;height:40px}.xmr-coinid strong{display:block;font-size:22px;line-height:1.2;letter-spacing:-.02em}.xmr-coinid small{color:var(--ash);font-size:12px}.xmr-amount{text-align:right}.xmr-amount strong{display:block;font:18px var(--code)}.xmr-fieldlabel{font:10px var(--code);letter-spacing:.13em;color:var(--ash);display:block;margin-bottom:9px}.xmr-transferline{display:flex;align-items:center;gap:14px;margin:20px 0;color:var(--ember);font:19px var(--code)}.xmr-transferline:before,.xmr-transferline:after{content:"";height:1px;flex:1;background:var(--seam)}.xmr-quoteinfo{display:flex;justify-content:space-between;gap:14px;padding:16px 0 0;margin:22px 0 0;border-top:1px dashed #393b3c;font:11px/1.7 var(--code);color:var(--ash)}.xmr-quoteinfo span:last-child{color:var(--chalk);text-align:right}.xmr-ticketgo{display:flex;justify-content:space-between;align-items:center;background:var(--ember);color:#130c07;margin:0 24px 24px;padding:15px 18px;font-size:15px;font-weight:700;border-radius:5px}.xmr-protocol{display:flex;justify-content:center;gap:25px;font:11px var(--code);color:var(--ash);padding-bottom:32px;flex-wrap:wrap}.xmr-protocol b{font-weight:400;color:#e6e2dd}.xmr-section{padding:35px 0;border-top:1px solid var(--seam)}.xmr-sectioncap{display:flex;align-items:baseline;justify-content:space-between;gap:20px}.xmr-sectioncap>span{font:11px var(--code);white-space:nowrap;color:var(--ash)}.xmr-pairgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.xmr-pair{display:block;border:1px solid var(--seam);border-radius:8px;background:var(--slab);padding:22px;text-decoration:none;transition:border-color .18s}.xmr-pair:hover{border-color:var(--ember);color:var(--chalk)}.xmr-pairicons{display:flex;align-items:center;gap:10px;margin-bottom:20px;color:#737678;font:16px var(--code)}.xmr-pairicons img{width:29px;height:29px}.xmr-pair h3{font-size:18px;letter-spacing:-.025em;margin-bottom:10px}.xmr-pair p{font-size:13px;line-height:1.6;margin:0;min-height:62px}.xmr-pairfoot{display:block;color:#ff9a57;font:11px var(--code);margin-top:18px}.xmr-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;counter-reset:route}.xmr-steps li{counter-increment:route}.xmr-steps li:before{content:"0" counter(route);display:block;color:var(--ember);font:13px var(--code);margin-bottom:15px}.xmr-steps h3{margin-bottom:10px}.xmr-steps p{font-size:14px;margin:0}.xmr-ledger{display:grid;grid-template-columns:1fr 1fr;gap:40px}.xmr-feelines{margin:0}.xmr-feelines>div{display:grid;grid-template-columns:100px 1fr;gap:15px;border-bottom:1px solid var(--seam);padding:13px 0}.xmr-feelines>div:first-child{padding-top:0}.xmr-feelines dt{font-size:13px;color:var(--chalk)}.xmr-feelines dd{font-size:13px;margin:0;color:var(--ash)}.xmr-timing{border-left:2px solid var(--ember);padding:3px 0 3px 21px}.xmr-timing h3{margin-bottom:14px}.xmr-timing p{font-size:14px}.xmr-timing a{font-size:12px;color:#d4d4d1}.xmr-fixgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}.xmr-fixgrid h3{font-size:16px;margin-bottom:10px}.xmr-fixgrid p{font-size:13px;margin:0}.xmr-track{margin:24px 0 0;font-size:13px;padding:14px 18px;background:var(--slab);border-radius:5px}.xmr-track a{color:#ffa267}.xmr-privacyrow{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:start}.xmr-privacyrow p{font-size:14px}.xmr-community{border:1px solid #634027;background:linear-gradient(110deg,#271b12,#171616);border-radius:8px;padding:23px}.xmr-community h3{font-size:19px;margin-bottom:12px}.xmr-community p{font-size:13px}.xmr-community a{color:#ffa267;font-size:14px;font-weight:700}.xmr-videorow{display:grid;grid-template-columns:.8fr 1fr;gap:35px;align-items:start}.xmr-videorow p{font-size:14px}.xmr-watchframe{aspect-ratio:16/9;border:1px solid var(--seam);border-radius:8px;overflow:hidden;background:#171819}.xmr-watchbutton{padding:0;border:0;width:100%;height:100%;position:relative;cursor:pointer;background:#171819;color:white;display:block}.xmr-watchbutton img{width:100%;height:100%;object-fit:cover;opacity:.7}.xmr-playmark{position:absolute;inset:0;display:grid;place-items:center}.xmr-playmark span{display:grid;place-items:center;width:58px;height:58px;background:var(--ember);color:#130c07;border-radius:50%;font-size:22px;padding-left:4px;box-shadow:0 0 30px #0008}.xmr-watchbutton:hover img{opacity:.95}.xmr-watchframe iframe{width:100%;height:100%;border:0;display:block}.xmr-video-credit{font:11px/1.7 var(--code);color:var(--ash);margin:12px 0 0}.xmr-faq details{border-bottom:1px solid var(--seam);padding:17px 0}.xmr-faq summary{list-style:none;cursor:pointer;font-size:16px;font-weight:600;display:flex;justify-content:space-between;gap:18px}.xmr-faq summary::-webkit-details-marker{display:none}.xmr-faq summary:after{content:"+";color:var(--ember);font:20px var(--code)}.xmr-faq details[open] summary:after{content:"−"}.xmr-faq details p{margin:13px 0 0;font-size:14px;max-width:760px}.xmr-lastline{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:28px 0}.xmr-lastline p{margin:0;font-size:14px}.xmr-lastline a{background:var(--ember);color:#160d07;text-decoration:none;padding:12px 20px;font-weight:700;font-size:14px;border-radius:5px;white-space:nowrap}.xmr-foot{border-top:1px solid var(--seam);padding:22px 0 28px;display:flex;justify-content:space-between;gap:20px;font:11px/1.7 var(--code);color:var(--ash)}.xmr-foot a{color:var(--ash)}.xmr-skip{position:absolute;left:15px;top:-80px;z-index:2;padding:10px;background:var(--ember);color:#000}.xmr-skip:focus{top:10px}
-@media(max-width:650px){.xmr-shell{padding:0 20px}.xmr-mast{min-height:73px}.xmr-nav{gap:12px}.xmr-nav>a:not(.xmr-toplink){display:none}.xmr-intro{padding-top:32px}.xmr-lede{font-size:15px}.xmr-tickethead{padding:17px}.xmr-ticketbody{padding:20px 17px}.xmr-ticketgo{margin:0 17px 17px}.xmr-amount strong{font-size:15px}.xmr-protocol{gap:10px 20px;font-size:10px}.xmr-section{padding:28px 0}.xmr-sectioncap{display:block}.xmr-sectioncap>span{display:none}.xmr-pairgrid,.xmr-steps,.xmr-fixgrid{grid-template-columns:1fr}.xmr-pair{padding:19px;position:relative}.xmr-pairicons{margin-bottom:12px}.xmr-pair p{min-height:0;max-width:270px}.xmr-pairfoot{position:absolute;right:18px;top:8px}.xmr-steps{gap:24px}.xmr-steps li{padding-left:35px;position:relative}.xmr-steps li:before{position:absolute;left:0;top:2px}.xmr-ledger,.xmr-privacyrow,.xmr-videorow{grid-template-columns:1fr;gap:25px}.xmr-lastline{align-items:start;flex-direction:column;gap:15px}.xmr-foot{flex-direction:column;gap:8px}.xmr-tickethead{font-size:10px}.xmr-quoteinfo{font-size:10px}.xmr-coinid{gap:9px}.xmr-coinid strong{font-size:20px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+:root{--bg:#09100E;--surface:#12201B;--text:#E7F3EC;--muted:#83968C;--accent:#2DD4A7;--accent-ink:#04201A;--radius:16px;--display:"Manrope";--body:"Manrope"}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:2rem}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:.22em}
+a:hover{text-decoration-thickness:2px}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+::selection{background:var(--accent);color:var(--accent-ink)}
+.c05d274{width:min(1180px,calc(100% - 64px));margin-inline:auto}
+.c2eca37{position:absolute;top:1rem;left:1rem;z-index:5;padding:.6rem 1rem;background:var(--surface);border-radius:var(--radius);transform:translateY(-200%)}
+.c2eca37:focus{transform:translateY(0)}
+.cc1074d{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:96px;border-bottom:1px solid color-mix(in srgb,var(--text) 10%,transparent)}
+.c85afed{display:inline-flex;align-items:center;gap:.7rem;color:var(--text);font:650 1.1rem/1.2 var(--display);text-decoration:none}
+.c1a797d{display:grid;place-items:center;width:36px;height:36px;background:var(--accent);color:var(--accent-ink);border-radius:calc(var(--radius) * .6)}
+.c1a797d svg{width:22px;height:22px;fill:none;stroke:var(--accent-ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cb4612e{display:flex;align-items:center;gap:1.7rem}
+.cb4612e>a:not(.cf6a0a2){color:var(--muted);font-size:.9rem;text-decoration:none}
+.cb4612e>a:hover{color:var(--text)}
+.cf6a0a2{padding:.6rem 1rem;border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);border-radius:var(--radius);background:color-mix(in srgb,var(--accent) 7%,var(--surface));font-size:.9rem;font-weight:650;text-decoration:none}
+.c32e3f7{padding-top:1.8rem;font-size:.82rem;color:var(--muted)}
+.c09275d{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0;padding:0;list-style:none;color:var(--muted);font-size:.82rem}
+.c09275d ol,.c09275d ul{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0;padding:0;list-style:none}
+.c09275d a{color:var(--muted)}
+.c09275d [aria-current]{color:var(--text)}
+.c011108{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,6vw,5.5rem);padding:3.5rem 0 5rem}
+.c562db6{min-width:0}
+.cdea90d{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 1.4rem;color:var(--muted);font-size:.88rem}
+.cdea90d::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 10%,transparent)}
+h1{margin:0;font:550 clamp(2.6rem,4.9vw,4.65rem)/1.07 var(--display);letter-spacing:-.055em;overflow-wrap:anywhere;text-wrap:balance}
+h1 a{color:var(--accent)}
+.cdcf97e{max-width:48ch;margin:1.6rem 0 2rem;color:var(--muted);font-size:1.07rem;line-height:1.8}
+.cb76eb8{display:inline-flex;justify-content:center;align-items:center;gap:1.6rem;min-height:54px;padding:.9rem 1.4rem;border:1px solid color-mix(in srgb,var(--accent) 70%,var(--text));border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 88%,var(--text)));color:var(--accent-ink);font-weight:650;text-decoration:none;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 20%,transparent);transition:transform .2s ease,box-shadow .2s ease}
+.cb76eb8:hover{transform:translateY(-2px);box-shadow:0 12px 28px color-mix(in srgb,var(--accent) 28%,transparent)}
+.c63efac{font-size:1.25rem;line-height:1}
+.c8734f1{margin:1rem 0 0;color:var(--muted);font-size:.8rem}
+.cc2188c{position:relative;min-width:0;padding:12px;border:1px solid color-mix(in srgb,var(--accent) 15%,transparent);border-radius:calc(var(--radius) + 12px);background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 14%,var(--bg)),color-mix(in srgb,var(--accent) 3%,var(--bg)));box-shadow:0 30px 70px -25px color-mix(in srgb,var(--text) 20%,transparent)}
+.cde7212{padding:clamp(1.25rem,3vw,2rem);border:1px solid color-mix(in srgb,var(--text) 8%,transparent);border-radius:var(--radius);background:var(--surface);box-shadow:0 4px 14px color-mix(in srgb,var(--text) 4%,transparent)}
+.c402150{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.65rem}
+.c402150 h2{margin:0;font:600 1.2rem/1.3 var(--display);letter-spacing:-.025em}
+.c40a8c8{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .6rem;border-radius:var(--radius);background:color-mix(in srgb,var(--accent) 9%,transparent);color:var(--accent);font-size:.72rem;white-space:nowrap}
+.c40a8c8::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.c613d9d{display:block;margin-bottom:.5rem;font-size:.83rem;font-weight:600}
+.c4f2bd7{display:flex;align-items:center;gap:.5rem;padding:.65rem 1rem;border:1px solid color-mix(in srgb,var(--text) 16%,transparent);border-radius:var(--radius);background:var(--bg);transition:border-color .2s ease}
+.c4f2bd7:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent)}
+.c4f2bd7 input{width:100%;min-width:0;padding:.25rem 0;border:0;background:var(--bg);color:var(--text);font:550 2rem/1.3 var(--display);font-variant-numeric:tabular-nums}
+.c4f2bd7 input:focus-visible{outline-offset:2px}
+.ce7b1e5{color:var(--muted);font-size:.8rem}
+.c740b2f{margin:.5rem 0 1.3rem;color:var(--muted);font-size:.74rem}
+.cddcceb{display:grid;grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr);align-items:center;gap:.6rem;padding:1.1rem 0;border-top:1px solid color-mix(in srgb,var(--text) 8%,transparent);border-bottom:1px solid color-mix(in srgb,var(--text) 8%,transparent)}
+.c62fe7c{display:flex;flex-direction:column;align-items:center;gap:.45rem;min-width:0;color:var(--muted);font-size:.75rem}
+.c451539{display:flex;align-items:center;justify-content:center;min-height:52px;max-width:100%;overflow-wrap:anywhere;color:var(--text);font-weight:600}
+.c451539 img,.c451539 svg{display:block;max-width:100%;width:auto;height:44px;object-fit:contain}
+.c56e4af{display:grid;place-items:center;width:32px;height:32px;border:1px solid color-mix(in srgb,var(--accent) 20%,transparent);border-radius:50%;background:color-mix(in srgb,var(--accent) 7%,var(--surface));color:var(--accent)}
+.c6b3f8a{padding:1.4rem 0 .25rem}
+.c6fa870{margin:0;color:var(--muted);font-size:.8rem}
+.c3931ca{display:flex;align-items:baseline;flex-wrap:wrap;gap:.5rem;margin:.3rem 0 1rem}
+.c3931ca output{font:550 clamp(1.65rem,3vw,2.5rem)/1.2 var(--display);letter-spacing:-.045em;color:var(--text);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.cff76a0{display:grid;gap:.45rem;margin:0 0 1.2rem;font-size:.8rem}
+.cff76a0>div{display:flex;justify-content:space-between;gap:1rem}
+.cff76a0 dt{color:var(--muted)}
+.cff76a0 dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.cde7212 .cb76eb8{width:100%;justify-content:space-between;min-height:50px;font-size:.9rem}
+.c32dd3e{margin:1rem 0 0;color:var(--muted);font-size:.73rem;line-height:1.65}
+.c353aaa{margin:.6rem 0 0;color:var(--text);font-size:.8rem;font-weight:600}
+.c353aaa:empty{display:none}
+.c6b553b{padding:2.1rem 2.3rem;margin-bottom:4.5rem;border:1px solid color-mix(in srgb,var(--text) 9%,transparent);border-radius:var(--radius);background:linear-gradient(115deg,var(--surface),color-mix(in srgb,var(--accent) 4%,var(--surface)))}
+.c685601{margin:0 0 1.3rem;font:550 1.5rem/1.3 var(--display);letter-spacing:-.035em}
+.cb6de1e{width:100%;border-collapse:collapse;text-align:left;font-size:.92rem}
+.cb6de1e caption{text-align:left;padding:0 0 1rem;color:var(--muted)}
+.cb6de1e th,.cb6de1e td{padding:1rem .9rem;border-bottom:1px solid color-mix(in srgb,var(--text) 9%,transparent);vertical-align:top;overflow-wrap:anywhere}
+.cb6de1e th{font-weight:600;color:var(--text)}
+.cb6de1e td{color:var(--muted)}
+.cb6de1e th:first-child,.cb6de1e td:first-child{padding-left:0}
+.cb6de1e tr:last-child>*{border-bottom:0}
+.cb6de1e thead th{font-size:.82rem;color:var(--muted)}
+.cf39451{max-width:820px;margin-inline:auto}
+.c3d8f00{padding:0 0 2.6rem;margin:0 0 2.6rem;border-bottom:1px solid color-mix(in srgb,var(--text) 10%,transparent);scroll-margin-top:2rem}
+.c3dfd49{margin:0 0 1.1rem;font:550 clamp(1.7rem,3vw,2.25rem)/1.2 var(--display);letter-spacing:-.04em;text-wrap:balance;overflow-wrap:anywhere}
+.c04ec0f{color:var(--muted);font:400 1rem/1.85 var(--body);overflow-wrap:anywhere}
+.c04ec0f p{margin:0 0 1.15rem}
+.c04ec0f h3,.c04ec0f h4{margin:1.6rem 0 .65rem;color:var(--text);font:600 1.25rem/1.4 var(--display)}
+.c04ec0f strong{color:var(--text);font-weight:600}
+.c04ec0f ul,.c04ec0f ol{padding-left:1.4rem}
+.c04ec0f li{padding-left:.3rem;margin:.5rem 0}
+.c04ec0f li::marker{color:var(--accent)}
+.c04ec0f blockquote{margin:1.5rem 0;padding:1rem 1.4rem;border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;background:color-mix(in srgb,var(--accent) 6%,var(--surface));color:var(--text)}
+.c04ec0f img{max-width:100%;height:auto;border-radius:var(--radius)}
+.c04ec0f>:last-child{margin-bottom:0}
+.c48a773{margin:.8rem 0;border:1px solid color-mix(in srgb,var(--text) 10%,transparent);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.c2bdacb{position:relative;display:block;padding:1.25rem 3.5rem 1.25rem 1.4rem;cursor:pointer;list-style:none;color:var(--text);font:550 1.05rem/1.5 var(--display)}
+.c2bdacb::-webkit-details-marker{display:none}
+.c2bdacb::after{content:"+";position:absolute;right:1.4rem;top:1.25rem;color:var(--accent);font:400 1.4rem/1.1 var(--body)}
+.c48a773[open]>.c2bdacb::after,.c48a773 details[open]>.c2bdacb::after{content:"−"}
+.c48a773[open]{border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
+.c2bdacb:focus-visible{outline-offset:-5px;border-radius:var(--radius)}
+.c924e0b{padding:0 1.4rem 1.4rem;color:var(--muted);font-size:.95rem;line-height:1.8;overflow-wrap:anywhere}
+.c924e0b>:first-child{margin-top:0}
+.c924e0b>:last-child{margin-bottom:0}
+.c3880b0{max-width:820px;margin:3.5rem auto 0;padding-top:2rem;border-top:1px solid color-mix(in srgb,var(--text) 10%,transparent)}
+.c80df23{display:grid;gap:.7rem;margin:0;padding:0;list-style:none}
+.cc1bb2b{padding:.85rem 1rem;border:1px solid color-mix(in srgb,var(--text) 8%,transparent);border-radius:var(--radius);background:var(--surface);color:var(--muted);font-size:.86rem;overflow-wrap:anywhere}
+.cc1bb2b a{color:var(--text);text-decoration-color:color-mix(in srgb,var(--accent) 55%,transparent)}
+a.cc1bb2b{display:block;color:var(--text)}
+.cffcd09{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:4rem;padding:1.75rem 0 2rem;border-top:1px solid color-mix(in srgb,var(--text) 10%,transparent);color:var(--muted);font-size:.8rem}
+.cffcd09 p{margin:0}
+.cffcd09 a{color:var(--muted)}
+@media(min-width:1500px){.c011108{padding-top:5rem;padding-bottom:6rem}}
+@media(max-width:850px){.c011108{grid-template-columns:1fr;gap:2.5rem;padding-top:2.5rem;padding-bottom:3rem}.c562db6{max-width:640px}.cc2188c{width:100%;max-width:560px;justify-self:center}h1{font-size:clamp(2.5rem,7vw,4rem)}.cdcf97e{max-width:58ch}.c6b553b{margin-bottom:3rem}.cb4612e{gap:1rem}}
+@media(max-width:540px){.c05d274{width:calc(100% - 32px)}.cc1074d{min-height:78px;gap:.75rem}.c85afed{font-size:.95rem;gap:.5rem}.c1a797d{width:30px;height:30px}.cb4612e>a:not(.cf6a0a2){display:none}.cf6a0a2{padding:.5rem .75rem;font-size:.8rem}.c32e3f7{padding-top:1.25rem}.c011108{padding-top:2rem;gap:2rem}h1{font-size:2.65rem}.cdcf97e{font-size:1rem}.c562db6>.cb76eb8{width:100%}.c8734f1{text-align:center}.cc2188c{padding:8px;border-radius:calc(var(--radius) + 8px)}.cde7212{padding:1.2rem}.c6b553b{padding:1.4rem 1.1rem}.cb6de1e{display:block;overflow-x:auto}.cb6de1e th,.cb6de1e td{min-width:125px;padding:.8rem .65rem}.c2bdacb{padding-left:1rem}.c924e0b{padding-left:1rem;padding-right:1rem}.cffcd09{align-items:flex-start;flex-direction:column;margin-top:3rem}.c3d8f00{margin-bottom:2rem;padding-bottom:2rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}.cb76eb8:hover{transform:none}}
 </style>
 </head>
-<body>
-<a class="xmr-skip" href="#monero-main">Skip to swap XMR</a>
-<div class="xmr-shell">
-<header class="xmr-mast">
-<a class="xmr-wordmark" href="https://insert_url/" aria-label="Swap XMR home"><img src="xmr.png" width="30" height="30" alt="Monero">swap xmr<span aria-hidden="true" style="color:#ff6600">/</span></a>
-<nav class="xmr-nav" aria-label="Main navigation"><a href="#xmr-routes">XMR pairs</a><a href="#xmr-fees">Swap fees</a><a class="xmr-toplink" href="/dashboard/">Swap XMR ↗</a></nav>
+<body id="top">
+<a class="c2eca37" href="#content">Skip to content</a>
+<header class="c05d274">
+<nav class="cc1074d" aria-label="Main navigation">
+<a class="c85afed" href="#top"><span class="c1a797d" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg></span>Swap guide</a>
+<div class="cb4612e"><a href="#key-facts">Key facts</a><a href="#sources">Sources</a><a class="cf6a0a2" href="dashboard/">Open app <span aria-hidden="true">↗</span></a></div>
+</nav>
 </header>
-<main id="monero-main">
-<section class="xmr-intro" aria-labelledby="xmr-heading">
-<div class="xmr-overline"><span>XMR</span> / Monero to BTC · USDT · LTC</div>
-<h1 id="xmr-heading">Swap <span>XMR</span></h1>
-<p class="xmr-lede">swap XMR for Bitcoin, Tether or Litecoin. Choose your destination, review the quote and move Monero into the asset you need.</p>
-<a class="xmr-heroaction" href="/dashboard/">Start your XMR swap <span aria-hidden="true">↗</span></a>
-</section>
-<div class="xmr-ticket" id="xmr-ticket" role="link" tabindex="0" aria-label="Open the dashboard to swap XMR for BTC, USDT or LTC">
-<div class="xmr-tickethead"><span class="xmr-shieldname"><svg width="17" height="20" viewBox="0 0 20 24" fill="none" aria-hidden="true"><path d="M10 2 18 5v7c0 5-8 10-8 10S2 17 2 12V5l8-3Z" stroke="currentColor" stroke-width="1.5"/><path d="m6 11 3 3 5-6" stroke="currentColor" stroke-width="1.5"/></svg>SHIELDED SWAP / XMR</span><span>01 → 02</span></div>
-<div class="xmr-ticketbody">
-<div class="xmr-sendrow"><div><span class="xmr-fieldlabel">YOU SEND</span><div class="xmr-coinid"><img src="xmr.png" width="40" height="40" alt="Monero XMR"><div><strong>XMR</strong><small>Monero network</small></div></div></div><div class="xmr-amount"><span class="xmr-fieldlabel">AMOUNT</span><strong>Set in app</strong></div></div>
-<div class="xmr-transferline" aria-hidden="true">↓</div>
-<div class="xmr-receiverow"><div><span class="xmr-fieldlabel">YOU GET</span><div class="xmr-coinid"><img src="btc.png" width="40" height="40" alt="Bitcoin BTC"><div><strong>BTC</strong><small>Bitcoin network</small></div></div></div><div class="xmr-amount"><span class="xmr-fieldlabel">RECEIVE AMOUNT</span><strong>Get quote ↗</strong></div></div>
-<div class="xmr-quoteinfo"><span>OTHER DESTINATIONS<br>QUOTE CHECK</span><span>USDT / LTC<br>Rate + fees + network</span></div>
+<div class="c05d274">
+<div class="c32e3f7"><nav class="c09275d" aria-label="Breadcrumb"><a href="dashboard/">Home</a> <span>/</span> <span>Swaps</span> <span>/</span> <span>XMR Swap</span></nav></div>
+<section class="c011108" aria-labelledby="hero-title">
+<div class="c562db6">
+<p class="cdea90d">Plan your swap</p>
+<h1 id="hero-title">XMR <em>Swap</em>.</h1>
+<p class="cdcf97e">An XMR Swap moves Monero into another asset through an instant, non-custodial exchanger instead of a trading account. You paste a destination address, the exchanger shows a quoted rate — fixed or floating — and a minimum amount, you send XMR to a one-time deposit address, and the swap is tracked from start to finish by a unique ID. No sign-up, no deposit held in a shared balance, and no password tied to your Monero.</p>
+<a class="cb76eb8" href="dashboard/">Start a swap <span class="c63efac" aria-hidden="true">↗</span></a>
+<p class="c8734f1">Compare the route. Estimate the rate.</p>
 </div>
-<div class="xmr-ticketgo"><span>Open XMR swap</span><span aria-hidden="true">↗</span></div>
+<aside class="cc2188c" aria-labelledby="estimator-title">
+<div class="cde7212">
+<div class="c402150"><h2 id="estimator-title">Swap estimator</h2><span class="c40a8c8">Live estimate</span></div>
+<label class="c613d9d" for="amount">You pay</label>
+<div class="c4f2bd7"><input id="amount" type="number" inputmode="decimal" min="1" max="1000000000" step="0.01" value="1000" aria-describedby="amount-help amount-error"><span class="ce7b1e5">units</span></div>
+<p class="c740b2f" id="amount-help">Enter 1–1,000,000,000 units, up to two decimal places.</p>
+<p class="c353aaa" id="amount-error" aria-live="polite"></p>
+<div class="cddcceb" aria-label="Swap route">
+<div class="c62fe7c"><span>From</span><div class="c451539"><img src="assets/tokens/xmr.svg" alt="Monero" width="28" height="28"></div></div>
+<span class="c56e4af" aria-hidden="true">→</span>
+<div class="c62fe7c"><span>To</span><div class="c451539"><img src="assets/tokens/usdc.svg" alt="USD Coin" width="28" height="28"></div></div>
 </div>
-<div class="xmr-protocol"><span><b>01</b> Select pair</span><span><b>02</b> Review quote</span><span><b>03</b> Send Monero</span></div>
-<section class="xmr-section" id="xmr-routes">
-<div class="xmr-sectioncap"><h2>Swap XMR to BTC, USDT or LTC</h2><span>CHOOSE YOUR RECEIVE ASSET</span></div>
-<div class="xmr-pairgrid">
-<a class="xmr-pair" href="/dashboard/"><div class="xmr-pairicons"><img src="xmr.png" width="29" height="29" alt="Monero"><span aria-hidden="true">→</span><img src="btc.png" width="29" height="29" alt="Bitcoin"></div><h3>Swap XMR to BTC</h3><p>Receive native Bitcoin at your BTC address. Use a Bitcoin mainnet destination.</p><span class="xmr-pairfoot">XMR / BTC ↗</span></a>
-<a class="xmr-pair" href="/dashboard/"><div class="xmr-pairicons"><img src="xmr.png" width="29" height="29" alt="Monero"><span aria-hidden="true">→</span><img src="usdt.png" width="29" height="29" alt="Tether"></div><h3>Swap XMR to USDT</h3><p>Move into Tether. Match the USDT payout network to your receiving wallet.</p><span class="xmr-pairfoot">XMR / USDT ↗</span></a>
-<a class="xmr-pair" href="/dashboard/"><div class="xmr-pairicons"><img src="xmr.png" width="29" height="29" alt="Monero"><span aria-hidden="true">→</span><img src="ltc.png" width="29" height="29" alt="Litecoin"></div><h3>Swap XMR to LTC</h3><p>Receive native Litecoin for your next transfer. Have your LTC address ready.</p><span class="xmr-pairfoot">XMR / LTC ↗</span></a>
+<div class="c6b3f8a" aria-live="polite" aria-atomic="true">
+<p class="c6fa870">Estimated amount received</p>
+<div class="c3931ca"><output id="received" for="amount">998.25</output><span class="ce7b1e5">units</span></div>
+<dl class="cff76a0">
+<div><dt>Estimated fee</dt><dd><output id="fee" for="amount">1.75</output> units</dd></div>
+<div><dt>Estimated time</dt><dd><output id="time" for="amount">5–7 min</output></dd></div>
+</dl>
 </div>
+<a class="cb76eb8" href="dashboard/">Continue <span class="c63efac" aria-hidden="true">→</span></a>
+<p class="c32dd3e">Fee = 0.15% of the amount + 0.25 units. Time starts at 2–4 minutes, adding one minute for every tenfold increase from 1 unit, rounded up.</p>
+<noscript><p class="c740b2f">Enable JavaScript to update the estimate as you change the amount.</p></noscript>
+</div>
+</aside>
 </section>
-<section class="xmr-section"><h2>Swap XMR: choose your pair, send, receive</h2><ol class="xmr-steps"><li><h3>Choose your payout</h3><p>Open the dashboard, enter your XMR amount and select BTC, USDT or LTC. Paste the receiving address for that asset and network.</p></li><li><h3>Check, then send</h3><p>Review the receive amount, fees, minimum and quote expiry. Send the requested XMR amount to the deposit address shown for your order.</p></li><li><h3>Receive your crypto</h3><p>The service releases the asset after your Monero transaction confirms and the order completes processing. Follow the payout transaction to your wallet.</p></li></ol></section>
-<section class="xmr-section" id="xmr-fees"><h2>XMR swap costs: network fee, service fee and payout</h2><div class="xmr-ledger"><dl class="xmr-feelines"><div><dt>Sending fee</dt><dd>Your Monero wallet charges a network fee to send XMR. Keep enough available to cover it.</dd></div><div><dt>Swap cost</dt><dd>A service fee or exchange-rate spread affects the quote. Compare the final receive amount for the same XMR input.</dd></div><div><dt>Payout fee</dt><dd>The destination network adds its own transaction cost. Check whether it is included in the receive amount.</dd></div></dl><div class="xmr-timing"><h3>How long does a swap XMR order take?</h3><p>Monero targets a block about every two minutes. Completion also depends on the required confirmations, service processing and the payout network.</p><p>A two-minute block is not a two-minute swap. Use your order status to follow each stage.</p><a href="https://www.getmonero.org/resources/moneropedia/block.html">Monero’s official block-time explanation ↗</a></div></div></section>
-<section class="xmr-section"><h2>Why is my XMR swap pending?</h2><div class="xmr-fixgrid"><article><h3>Deposit still pending</h3><p>Check the transaction ID and confirmations. If it is confirmed but the order has not updated, contact the order’s support with the order ID and transaction hash.</p></article><article><h3>Balance is locked</h3><p>Let your Monero wallet finish syncing and check its unlocked balance. Recently received XMR and change can need more blocks before they are spendable.</p></article><article><h3>Quote expired or amount changed</h3><p>Refresh an expired quote before sending. If you already sent an incorrect amount, keep the transaction ID and resolve the existing order with support.</p></article></div><p class="xmr-track">Check your transaction: <a href="https://xmrchain.net/">find your Monero transaction and confirmations on XMRChain ↗</a></p></section>
-<section class="xmr-section"><h2>Swap Monero: what stays private?</h2><div class="xmr-privacyrow"><div><p>Monero is a privacy-focused layer-one blockchain. RingCT hides transaction amounts; stealth addresses protect recipients on-chain. Read the <a href="https://www.getmonero.org/get-started/what-is-monero/">official explanation of Monero’s privacy technology</a>.</p><p>When you swap XMR to BTC, USDT or LTC, the payout follows the destination network’s visibility rules. Use a fresh receiving address where supported and keep your order details private.</p></div><aside class="xmr-community"><div class="xmr-overline">WALLETS / NETWORK / XMR HELP</div><h3>Monero community discussions</h3><p>Discuss wallet synchronization, confirmations and Monero usage with the community. Keep transaction-specific order details in the service’s support channel.</p><a href="https://www.reddit.com/r/Monero/">Read Monero wallet and network discussions on r/Monero ↗</a></aside></div></section>
-<section class="xmr-section"><div class="xmr-videorow"><div><h2>Watch an XMR swap from start to finish</h2><p>This short walkthrough shows swapping between Bitcoin, Ether or Tether and Monero (XMR) with no KYC — the same idea as the swap XMR order above.</p><p class="xmr-video-credit">HERMANN DEFI · Published 9 March 2026<br>Swap BTC, ETH or USDT to Monero, no KYC</p></div><div class="xmr-watchframe" id="xmr-film"><button class="xmr-watchbutton" id="xmr-play" type="button" aria-label="Play: how to swap to and from Monero XMR"><img src="https://i.ytimg.com/vi/V2tTjgQoc7M/hqdefault.jpg" width="480" height="360" loading="lazy" alt="How to swap BTC, ETH or USDT to Monero XMR video"><span class="xmr-playmark" aria-hidden="true"><span>▶</span></span></button></div></div></section>
-<section class="xmr-section xmr-faq" id="xmr-questions"><h2>XMR swap essentials: minimums, rates and receiving funds</h2>
-<details><summary>How do I swap XMR to BTC?</summary><p>Select XMR as the sending asset and BTC as the receiving asset. Enter a Bitcoin mainnet address, review the quote and send the requested Monero deposit. The service releases BTC after confirmations and order processing.</p></details>
-<details><summary>Can I swap XMR without an account?</summary><p>Account requirements depend on the service handling the order. Open the dashboard and review its requirements before sending XMR. An account-free flow does not guarantee that verification will never be requested.</p></details>
-<details><summary>Which network should I use to swap XMR to USDT?</summary><p>Send XMR on the Monero network. For USDT, choose a payout network offered in the quote that your receiving wallet supports. The network must match at both ends of the USDT payout.</p></details>
-<details><summary>What is the minimum amount to swap XMR?</summary><p>The minimum depends on the pair, network costs and current quote. Check the order’s displayed minimum before sending and leave enough XMR in your wallet for the sending fee.</p></details>
-<details><summary>Why is my swap XMR order pending?</summary><p>A pending order can be waiting for the Monero deposit, enough confirmations, service processing or payout confirmation. Check your transaction hash and order status. For a confirmed deposit that is not credited, share the order ID and transaction hash with support.</p></details>
+<section class="c6b553b" id="key-facts" aria-labelledby="facts-title">
+<h2 class="c685601" id="facts-title">Key facts</h2>
+<table class="cb6de1e"><tbody><tr><th scope="row">Pair</th><td>XMR to USDC, or the reverse</td></tr>
+<tr><th scope="row">Rate type</th><td>Fixed-rate or floating-rate quote</td></tr>
+<tr><th scope="row">Minimum amount</th><td>Set per exchanger, moves with network fees</td></tr>
+<tr><th scope="row">Tracking</th><td>By a single swap ID, no login</td></tr>
+<tr><th scope="row">Confirmations</th><td>Required before the output is sent</td></tr>
+<tr><th scope="row">Custody</th><td>Non-custodial — no shared balance held</td></tr></tbody></table>
 </section>
-<div class="xmr-lastline"><p>Have your receiving address ready. Choose your XMR pair.</p><a href="/dashboard/">Swap XMR now ↗</a></div>
+<main class="cf39451" id="content">
+<section class="c3d8f00"><h2 class="c3dfd49">What an XMR Swap Is</h2><div class="c04ec0f"><strong>An XMR Swap is a direct, non-custodial trade of Monero for another asset, run by an instant exchanger instead of a custodial account.</strong> You never create a login or hand over a balance to hold; the exchanger's backend only ever sees the one deposit address it generates for your specific swap. Behind the quote sits a market maker that already holds both assets, so the exchanger simply routes your XMR in and the chosen asset out once the chain confirms your payment. Monero itself is a privacy-focused cryptocurrency, as described on <a href="https://en.wikipedia.org/wiki/Monero" rel="nofollow noopener" target="_blank">Wikipedia</a>, which is part of why many users prefer swapping it through a non-custodial exchanger rather than an identity-verified exchange.<h3>Non-Custodial Exchanger Mechanics</h3>The exchanger never takes custody of funds the way an order-book exchange does. Each swap gets its own single-use deposit address, generated at the moment you request a quote, and the backend watches that address for the exact confirmation count Monero requires before releasing the output asset. Nothing sits in a shared pool waiting for you to log in and withdraw it.<h3>Why No Account Is Needed</h3>Because the exchanger never custodies your balance, it has nothing to protect with a password. There is no sign-up form, no email verification, and no dashboard to log into — the swap ID issued at the start of the transaction is the only credential you need to check on it later, and anyone holding that ID can see the same status you can.</div></section>
+<section class="c3d8f00"><h2 class="c3dfd49">XMR Swap Quotes: Fixed-Rate vs Floating-Rate</h2><div class="c04ec0f">Every XMR Swap starts with a quote, and the exchanger lets you pick whether that quote is locked or allowed to drift with the market. A fixed-rate quote reserves the exact output amount for a short window, usually ten to fifteen minutes, and holds the exchanger to that number even if the price moves before your deposit confirms. A floating-rate quote instead recalculates the output at the moment your deposit is actually detected, so you get the live market rate but no promise of what that number will be when you send.<table><thead><tr><th>Aspect</th><th>Fixed-Rate XMR Swap</th><th>Floating-Rate XMR Swap</th></tr></thead><tbody><tr><td>Rate lock</td><td>Set at quote, honored for a short window</td><td>Recalculated when deposit is detected</td></tr><tr><td>Spread</td><td>Slightly wider, pays for the guarantee</td><td>Tighter, follows the live market</td></tr><tr><td>Best for</td><td>Volatile markets, predictable output</td><td>Calm markets, best average price</td></tr></tbody></table><h3>What a Fixed Rate Locks In</h3>A fixed-rate XMR Swap sets both the float — the exchanger's margin — and the network fee estimate into one number shown before you send anything. If the market swings while your transaction sits in the mempool, you still receive the amount quoted, because the exchanger absorbs the difference as the cost of the guarantee.<h3>What a Floating Rate Leaves Open</h3>A floating-rate swap skips that guarantee and instead applies the spot rate, minus the float and network fee, at the moment your Monero deposit reaches the required confirmations. It usually carries a tighter spread, which rewards you in calm markets but means the final amount can differ from the number you saw when you requested the quote.</div></section>
+<section class="c3d8f00"><h2 class="c3dfd49">Minimum Amounts in an XMR Swap</h2><div class="c04ec0f">Every XMR Swap enforces a minimum deposit, and sending less than that threshold is the single most common way a swap gets stuck. The minimum exists because the network fee and the exchanger's float take a fixed bite out of small amounts — below a certain size, the fee would consume the entire output, so the exchanger refuses to process the trade rather than hand you back dust. Minimums move with Monero's own fee market and with the destination chain's fee, so the number quoted today may not match the number quoted next week. Aggregate swap volume across instant exchangers is tracked independently by sites like <a href="https://defillama.com/" rel="nofollow noopener" target="_blank">DefiLlama</a>, useful context when comparing minimums and liquidity across providers. Always re-check the posted minimum immediately before sending XMR rather than relying on a figure from an earlier visit, since a deposit under the floor is usually held for a refund instead of swapped.</div></section>
+<section class="c3d8f00"><h2 class="c3dfd49">How an XMR Swap Is Tracked by ID</h2><div class="c04ec0f">The moment you request a quote, the exchanger issues a swap ID — a short alphanumeric string that becomes the single reference for everything that happens next. Every status change, from waiting for your deposit to crediting the output address, is logged against that ID and shown on a status page you can reload at any time without signing in. Once the output address receives USDC, you can confirm the transfer independently on <a href="https://etherscan.io/" rel="nofollow noopener" target="_blank">Etherscan</a>, separate from the exchanger's own status page.<h3>Why Swap IDs Matter</h3>Because an XMR Swap has no account behind it, the ID is the only way to reopen your own transaction later. Save it the moment it appears — in a note, a bookmark of the status page, or a screenshot — because support teams ask for it first, and a lost ID with no other record can make a stuck swap much harder to resolve.<h3>What Happens Without One</h3>A deposit sent to the correct address but tied to an expired or mistyped quote can still be matched manually by support, but only after you supply the sending transaction hash and the approximate time, which takes far longer than simply citing the swap ID the exchanger gave you at the start.</div></section>
+<section class="c3d8f00"><h2 class="c3dfd49">Refunds When an XMR Swap Is Underpaid or Overpaid</h2><div class="c04ec0f">Monero's own fee estimation and wallet rounding mean the amount that actually lands at the deposit address rarely matches the quote to the last piece. An XMR Swap built on instant-exchange rails handles this with two separate rules. Underpayment — sending less than the quoted amount — usually triggers a recalculated, smaller output once the deposit clears, rather than cancelling the trade outright, because the exchanger would rather complete a slightly smaller swap than process a refund for a shortfall caused by network fees. Overpayment — sending more, often because a wallet rounded up or a second output landed at the same address — is typically refunded for the excess to a return address you provide, or the whole surplus is swapped at the same rate if you choose not to supply one. Neither case requires opening a support ticket if you catch it quickly: the status page tied to your swap ID shows whether a refund address is needed and gives you a window to add one before the exchanger processes it automatically.</div></section>
+<section class="c3d8f00"><h2 class="c3dfd49">Doing an XMR Swap Step by Step</h2><div class="c04ec0f">The flow is identical whichever direction you are trading, which is what makes an XMR Swap predictable once you have run through it once.<ul><li>Enter the pair and amount, then choose a fixed or floating rate for the quote.</li><li>Paste the destination address for the asset you are receiving.</li><li>Copy the one-time Monero deposit address and send the exact quoted amount from your own wallet.</li><li>Save the swap ID shown on the status page to track confirmations.</li><li>Wait for the required Monero confirmations; the output is sent automatically once they clear.</li></ul></div></section>
+<section class="c3d8f00"><h2 class="c3dfd49">XMR Swap Without an Account vs Exchange Accounts</h2><div class="c04ec0f">A custodial exchange asks you to register, verify identity, deposit into a shared balance, and only then place a trade — your Monero sits in the exchange's wallet from the moment it arrives until you withdraw. An XMR Swap through an instant exchanger skips every one of those steps: there is no balance to hold because each swap has its own address and its own short lifecycle, finished in one deposit and one payout. The trade-off is that an account-based exchange can offer order types, lower fees on its maker-taker book, and a login history if a support dispute ever needs one; see Monero network activity on <a href="https://www.xmrchain.net/" rel="nofollow noopener" target="_blank">the Monero explorer</a> or read the project's own description at <a href="https://www.getmonero.org/" rel="nofollow noopener" target="_blank">getmonero.org</a> for background on how the chain itself confirms a deposit. For most one-off conversions where custody risk matters more than order-book features, the no-account exchanger route is the simpler choice.</div></section>
+<details class="c48a773"><summary class="c2bdacb">What is an XMR Swap?</summary><div class="c924e0b"><strong>An XMR Swap is a non-custodial exchange of Monero for another asset through an instant exchanger rather than a trading account.</strong> You send XMR to a one-time address and receive the output asset once the network confirms it.</div></details>
+<details class="c48a773"><summary class="c2bdacb">What is the difference between a fixed-rate and floating-rate XMR Swap?</summary><div class="c924e0b">A fixed-rate quote locks the output amount for a short window regardless of market movement, while a floating-rate quote recalculates the output at the live rate once your deposit is detected.</div></details>
+<details class="c48a773"><summary class="c2bdacb">Is there a minimum amount for an XMR Swap?</summary><div class="c924e0b">Yes. Minimums exist because the network fee and the exchanger's float would consume the entire output on a very small trade, so deposits below the posted floor are usually held for a refund instead of swapped.</div></details>
+<details class="c48a773"><summary class="c2bdacb">How do I track an XMR Swap?</summary><div class="c924e0b">Every swap gets a unique ID the moment you request a quote. That ID opens a status page showing deposit detection, confirmations, and payout, with no account or login needed.</div></details>
+<details class="c48a773"><summary class="c2bdacb">What happens if I send too little or too much Monero?</summary><div class="c924e0b">Underpayment usually produces a smaller recalculated output rather than a cancelled trade, and overpayment is refunded to a return address you provide, or swapped in full if you skip one.</div></details>
+<details class="c48a773"><summary class="c2bdacb">Do I need to create an account for an XMR Swap?</summary><div class="c924e0b">No. The exchanger never holds a shared balance, so there is nothing to register for — the swap ID is the only reference you need.</div></details>
+<details class="c48a773"><summary class="c2bdacb">How long does an XMR Swap take?</summary><div class="c924e0b">Most of the wait is Monero's own confirmation time on your deposit; once that clears, the output is sent automatically and usually arrives within minutes.</div></details>
 </main>
-<footer class="xmr-foot"><span>MONERO / XMR → BTC · USDT · LTC</span><a href="#xmr-questions">Swap XMR questions and answers ↑</a></footer>
+<section class="c3880b0" id="sources" aria-labelledby="sources-title">
+<h2 class="c685601" id="sources-title">Sources</h2>
+<ul class="c80df23"><li><a class="cc1bb2b" href="https://www.getmonero.org/" rel="nofollow noopener" target="_blank">Monero project</a></li>
+<li><a class="cc1bb2b" href="https://www.xmrchain.net/" rel="nofollow noopener" target="_blank">Monero explorer (xmrchain.net)</a></li>
+<li><a class="cc1bb2b" href="https://en.wikipedia.org/wiki/Monero" rel="nofollow noopener" target="_blank">Monero on Wikipedia</a></li>
+<li><a class="cc1bb2b" href="https://defillama.com/" rel="nofollow noopener" target="_blank">DefiLlama</a></li></ul>
+</section>
+<footer class="cffcd09"><p>Updated Oct 10, 2026</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
 </div>
-<script type="application/ld+json" id="xmr-schema">
-{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://insert_url/#webpage","url":"https://insert_url/","name":"swap XMR to BTC, USDT & LTC | Monero","inLanguage":"en","description":"Swap XMR to Bitcoin, Tether or Litecoin with practical guidance on quotes, fees and confirmations.","mentions":{"@type":"WebPage","@id":"https://www.reddit.com/r/Monero/","url":"https://www.reddit.com/r/Monero/","name":"Monero community discussions on r/Monero"},"video":{"@id":"https://insert_url/#wallet-video"}},{"@type":"VideoObject","@id":"https://insert_url/#wallet-video","name":"How to Swap BTC, ETH or USDT to Monero (XMR) No KYC","description":"A walkthrough of swapping between Bitcoin, Ethereum or Tether and Monero (XMR) without KYC.","thumbnailUrl":"https://i.ytimg.com/vi/V2tTjgQoc7M/hqdefault.jpg","uploadDate":"2026-03-09","duration":"PT2M47S","embedUrl":"https://www.youtube-nocookie.com/embed/V2tTjgQoc7M","author":{"@type":"Person","name":"Hermann DeFi"}},{"@type":"FAQPage","@id":"https://insert_url/#faq","mainEntity":[{"@type":"Question","name":"How do I swap XMR to BTC?","acceptedAnswer":{"@type":"Answer","text":"Select XMR as the sending asset and BTC as the receiving asset. Enter a Bitcoin mainnet address, review the quote and send the requested Monero deposit. The service releases BTC after confirmations and order processing."}},{"@type":"Question","name":"Can I swap XMR without an account?","acceptedAnswer":{"@type":"Answer","text":"Account requirements depend on the service handling the order. Open the dashboard and review its requirements before sending XMR. An account-free flow does not guarantee that verification will never be requested."}},{"@type":"Question","name":"Which network should I use to swap XMR to USDT?","acceptedAnswer":{"@type":"Answer","text":"Send XMR on the Monero network. For USDT, choose a payout network offered in the quote that your receiving wallet supports. The network must match at both ends of the USDT payout."}},{"@type":"Question","name":"What is the minimum amount to swap XMR?","acceptedAnswer":{"@type":"Answer","text":"The minimum depends on the pair, network costs and current quote. Check the order’s displayed minimum before sending and leave enough XMR in your wallet for the sending fee."}},{"@type":"Question","name":"Why is my swap XMR order pending?","acceptedAnswer":{"@type":"Answer","text":"A pending order can be waiting for the Monero deposit, enough confirmations, service processing or payout confirmation. Check your transaction hash and order status. For a confirmed deposit that is not credited, share the order ID and transaction hash with support."}}]}]}
-</script>
 <script>
-const xmrTicket = document.getElementById('xmr-ticket');
-const xmrOpenDashboard = () => window.location.assign('/dashboard/');
-xmrTicket.addEventListener('click', xmrOpenDashboard);
-xmrTicket.addEventListener('keydown', event => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    xmrOpenDashboard();
+(() => {
+  const amount = document.getElementById('amount');
+  const received = document.getElementById('received');
+  const fee = document.getElementById('fee');
+  const time = document.getElementById('time');
+  const error = document.getElementById('amount-error');
+  const format = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  let timer;
+  function update() {
+    const value = amount.valueAsNumber;
+    if (!Number.isFinite(value) || !amount.validity.valid) {
+      amount.setAttribute('aria-invalid', 'true');
+      error.textContent = 'Enter an amount from 1 to 1,000,000,000 with up to two decimal places.';
+      received.value = '—';
+      fee.value = '—';
+      time.value = '—';
+      return;
+    }
+    amount.removeAttribute('aria-invalid');
+    error.textContent = '';
+    const amountCents = Math.round(value * 100);
+    const feeCents = Math.round(amountCents * 0.0015 + 25);
+    const minutes = 2 + Math.ceil(Math.log10(value));
+    received.value = format.format((amountCents - feeCents) / 100);
+    fee.value = format.format(feeCents / 100);
+    time.value = minutes + '–' + (minutes + 2) + ' min';
   }
-});
-document.getElementById('xmr-play').addEventListener('click', () => {
-  const frame = document.createElement('iframe');
-  frame.src = 'https://www.youtube-nocookie.com/embed/V2tTjgQoc7M?autoplay=1&rel=0';
-  frame.title = 'Hermann DeFi: How to Swap BTC, ETH or USDT to Monero (XMR) No KYC';
-  frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-  frame.referrerPolicy = 'strict-origin-when-cross-origin';
-  frame.allowFullscreen = true;
-  document.getElementById('xmr-film').replaceChildren(frame);
-  frame.focus();
-});
+  amount.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(update, 180);
+  });
+  amount.addEventListener('change', () => {
+    clearTimeout(timer);
+    update();
+  });
+  update();
+})();
 </script>
 </body>
 </html>

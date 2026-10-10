@@ -1,0 +1,3 @@
+# XMR Swap
+
+See how an XMR Swap works through instant, non-custodial exchangers: fixed vs floating quotes, minimum amounts, refunds, and tracking by ID — no account required.
