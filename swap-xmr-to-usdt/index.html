@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swap XMR to USDT — Instant, No-KYC Stablecoin Exit</title>
+  <meta name="description" content="Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.">
+  <link rel="canonical" href="https://swap-xmr.github.io/swap-xmr-to-usdt/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Swap XMR to USDT Instantly">
+  <meta property="og:description" content="Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.">
+  <meta property="og:url" content="https://swap-xmr.github.io/swap-xmr-to-usdt/">
+  <meta property="og:image" content="https://swap-xmr.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swap XMR to USDT Instantly">
+  <meta name="twitter:description" content="Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.">
+  <meta name="twitter:image" content="https://swap-xmr.github.io/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://swap-xmr.github.io/#website", "url": "https://swap-xmr.github.io/swap-xmr-to-usdt/", "name": "Swap XMR to USDT — Instant, No-KYC Stablecoin Exit"}, {"@type": "WebPage", "@id": "https://swap-xmr.github.io/#webpage", "url": "https://swap-xmr.github.io/swap-xmr-to-usdt/", "name": "Swap XMR to USDT — Instant, No-KYC Stablecoin Exit", "isPartOf": {"@id": "https://swap-xmr.github.io/#website"}, "description": "Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.", "datePublished": "2026-10-12", "dateModified": "2026-10-12"}, {"@type": "SoftwareApplication", "name": "Swap XMR to USDT", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://swap-xmr.github.io/swap-xmr-to-usdt/"}, {"@type": "ListItem", "position": 2, "name": "Swaps"}, {"@type": "ListItem", "position": 3, "name": "Swap XMR to USDT"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I swap XMR to USDT without KYC?", "acceptedAnswer": {"@type": "Answer", "text": "Use a non-custodial instant exchanger: send Monero to its one-time deposit address and receive USDT with no account or identity check. Choose the USDT network first, paste a matching receiving address, and the payout is sent once Monero confirms."}}, {"@type": "Question", "name": "Which USDT network should I choose when swapping from XMR?", "acceptedAnswer": {"@type": "Answer", "text": "TRC-20 on Tron is cheapest and fastest and fits most purposes. Pick ERC-20 on Ethereum only when the place you are sending USDT accepts nothing else, since Ethereum gas can cost many times more."}}, {"@type": "Question", "name": "Why does the USDT network affect how much I receive?", "acceptedAnswer": {"@type": "Answer", "text": "The dollar peg is identical on every chain, but each network charges its own withdrawal fee. A payout on Ethereum costs several dollars in gas while the same payout on Tron costs cents, so the net USDT received differs by network."}}, {"@type": "Question", "name": "How long does it take to swap XMR to USDT?", "acceptedAnswer": {"@type": "Answer", "text": "Usually ten to thirty minutes. Most of that is Monero's own confirmation time on your deposit; once it clears, the USDT payout is sent automatically and lands within seconds to a few minutes depending on the network."}}, {"@type": "Question", "name": "Is swapping XMR to USDT a way to escape volatility?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. USDT tracks the US dollar, so converting Monero into it locks the current dollar value while keeping the balance as an on-chain, transferable asset you can redeploy later without a bank or fiat withdrawal."}}, {"@type": "Question", "name": "What if I send the wrong USDT network address?", "acceptedAnswer": {"@type": "Answer", "text": "A USDT token issued on one chain cannot settle on an address for a different chain, which can strand funds. Always confirm the receiving wallet shows a USDT address on the exact network you selected before sending any Monero."}}, {"@type": "Question", "name": "Instant exchanger or centralized exchange for XMR to USDT?", "acceptedAnswer": {"@type": "Answer", "text": "An instant exchanger is faster to start, needs no account, and is non-custodial. A centralized exchange offers an order book and a paper trail but requires identity verification and holds your funds, and increasingly delists Monero pairs."}}]}]}</script>
+  <style>
+    :root{--bg:#09100E;--surface:#12201B;--text:#E7F3EC;--muted:#83968C;--accent:#2DD4A7;--accent-ink:#04201A;--radius:16px;--display:"Manrope";--body:"Manrope"}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: .12em; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    ::selection { background: var(--accent); color: var(--accent-ink); }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--display); line-height: 1.15; text-wrap: balance; }
+    p, h1, h2, h3 { margin-top: 0; }
+    img, svg { max-width: 100%; vertical-align: middle; }
+    .c92e7cd { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
+    .c5a2b20 { position: absolute; z-index: 5; top: .5rem; left: 1rem; padding: .7rem 1rem; background: var(--surface); transform: translateY(-180%); border-radius: var(--radius); }
+    .c5a2b20:focus { transform: translateY(0); }
+    .c0ca913 { border-bottom: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
+    .ca4bfe8 { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .c9bafce { display: inline-flex; align-items: center; gap: .7rem; color: var(--text); font: 650 1.12rem/1.2 var(--display); text-decoration: none; }
+    .c4650c0 { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: calc(var(--radius) * .6); background: var(--accent); color: var(--accent-ink); }
+    .cfc6f28 { width: 1.2rem; height: 1.2rem; fill: none; stroke: var(--accent-ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+    .c798d5b { display: flex; align-items: center; gap: 1.8rem; }
+    .c798d5b > a { font-size: .88rem; font-weight: 600; text-decoration: none; }
+    .c798d5b > a:not(.c5548a2) { color: var(--muted); }
+    .c5548a2 { display: inline-flex; align-items: center; justify-content: center; gap: .8rem; min-height: 52px; padding: .85rem 1.4rem; border: 1px solid color-mix(in srgb,var(--accent-ink) 12%,transparent); border-radius: var(--radius); background: linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 88%,var(--text))); color: var(--accent-ink); font: 650 .95rem/1.3 var(--body); text-decoration: none; box-shadow: 0 6px 18px color-mix(in srgb,var(--accent) 17%,transparent); transition: transform .18s ease, box-shadow .18s ease; }
+    .c5548a2:hover { transform: translateY(-2px); box-shadow: 0 9px 24px color-mix(in srgb,var(--accent) 25%,transparent); }
+    .ca4bfe8 .c5548a2 { min-height: 42px; padding: .65rem 1rem; }
+    .c6cbbee { padding-block: 1rem 0; color: var(--muted); font-size: .8rem; overflow-wrap: anywhere; }
+    .c3db8b8 { color: var(--muted); }
+    .c3db8b8 a, a.c3db8b8 { color: var(--muted); text-decoration: none; }
+    .c3db8b8 a:hover, a.c3db8b8:hover { color: var(--accent); text-decoration: underline; }
+    .c3db8b8 ol, .c3db8b8 ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: 0; margin: 0; list-style: none; }
+    .c5347f2 { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: clamp(2rem,5vw,4.5rem); align-items: start; padding-block: 1.5rem 3rem; }
+    .c5a5bbd { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.3rem; color: var(--accent); font-size: .86rem; font-weight: 600; }
+    .c5a5bbd::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb,var(--accent) 9%,transparent); }
+    h1 { margin-bottom: 1.4rem; font-size: clamp(2.5rem,4.7vw,4.35rem); font-weight: 600; letter-spacing: -.055em; overflow-wrap: anywhere; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .c9ae096 { max-width: 48ch; margin-bottom: 2rem; color: var(--muted); font-size: 1.08rem; line-height: 1.8; }
+    .cbb3db5 { position: relative; min-width: 0; padding: clamp(1.1rem,2.4vw,1.5rem); border: 1px solid color-mix(in srgb,var(--accent) 20%,var(--surface)); border-radius: calc(var(--radius) * 1.6); background: linear-gradient(155deg,color-mix(in srgb,var(--accent) 7%,var(--surface)),var(--surface) 40%); box-shadow: 0 24px 64px color-mix(in srgb,var(--text) 9%,transparent),0 4px 12px color-mix(in srgb,var(--accent) 6%,transparent); }
+    .c49c771 { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .7rem; margin-bottom: 1rem; }
+    .c49c771 h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.035em; }
+    .c2629d1 { display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .65rem; border: 1px solid color-mix(in srgb,var(--accent) 16%,transparent); border-radius: 999px; background: color-mix(in srgb,var(--accent) 8%,var(--surface)); color: var(--accent); font-size: .72rem; font-weight: 600; }
+    .c2629d1::before { content: ""; width: .35rem; height: .35rem; border-radius: 50%; background: var(--accent); }
+    .route { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: .8rem; padding: .8rem; margin-bottom: 1rem; border: 1px solid color-mix(in srgb,var(--text) 9%,transparent); border-radius: var(--radius); background: var(--surface); }
+    .endpoint { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; }
+    .endpoint:last-child { align-items: flex-end; }
+    .endpoint-label, .c9e5ea5 { color: var(--muted); font-size: .78rem; font-weight: 500; }
+    .logo { display: flex; align-items: center; min-height: 36px; max-width: 100%; overflow-wrap: anywhere; font: 600 1rem/1.3 var(--display); }
+    .logo img, .logo svg { max-height: 36px; width: auto; max-width: 100%; object-fit: contain; }
+    .route-arrow { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: color-mix(in srgb,var(--accent) 9%,var(--surface)); }
+    .route-arrow .cfc6f28 { stroke: var(--accent); }
+    .c9e5ea5 { display: block; margin-bottom: .5rem; color: var(--text); }
+    .amount-field { display: flex; align-items: center; gap: .75rem; padding: .8rem 1rem; border: 1px solid color-mix(in srgb,var(--text) 18%,transparent); border-radius: var(--radius); background: var(--bg); transition: border-color .18s ease; }
+    .amount-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent); }
+    .amount-field input { width: 100%; min-width: 0; padding: .2rem 0; border: 0; background: var(--bg); color: var(--text); font: 550 1.6rem/1.2 var(--display); font-variant-numeric: tabular-nums; }
+    .amount-field input:focus { outline: 0; }
+    .unit { color: var(--muted); font-size: .8rem; }
+    .ce703d6 { margin: .45rem 0 .85rem; color: var(--muted); font-size: .74rem; }
+    .field-error { margin: .5rem 0; color: var(--text); font-size: .8rem; font-weight: 600; }
+    [hidden] { display: none !important; }
+    .estimate { padding: 1rem; border-radius: var(--radius); background: linear-gradient(120deg,color-mix(in srgb,var(--accent) 12%,var(--surface)),color-mix(in srgb,var(--accent) 4%,var(--surface))); }
+    .estimate-label { margin-bottom: .25rem; color: var(--muted); font-size: .8rem; }
+    .estimate-value { display: block; color: var(--text); font: 600 clamp(1.7rem,3vw,2.5rem)/1.3 var(--display); letter-spacing: -.04em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+    .estimate-value small { color: var(--muted); font: 400 .8rem/1.4 var(--body); letter-spacing: 0; }
+    .estimate dl { display: grid; gap: .5rem; margin: .8rem 0 0; padding-top: .8rem; border-top: 1px solid color-mix(in srgb,var(--accent) 15%,transparent); font-size: .8rem; }
+    .estimate dl div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; }
+    .estimate dt { color: var(--muted); }
+    .estimate dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .method { margin-block: .7rem; color: var(--muted); font-size: .75rem; }
+    .method summary { width: fit-content; color: var(--text); cursor: pointer; }
+    .method p { margin: .65rem 0 0; }
+    .cbb3db5 > .c5548a2 { width: 100%; }
+    .c40cb4f { padding: .8rem 1rem; border: 1px solid color-mix(in srgb,var(--text) 10%,transparent); border-radius: var(--radius); background: var(--surface); }
+    .ca662ef { margin-bottom: .45rem; }
+    .ca659a1 { display: flex; align-items: center; gap: .75rem; }
+    .c66678e { flex: 1; min-width: 0; padding: 0; border: 0; background: transparent; color: var(--text); font: 550 1.55rem/1.2 var(--display); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+    .c66678e:focus { outline: 0; }
+    .c15418a { position: relative; display: inline-flex; align-items: center; gap: .5rem; flex: none; padding: .4rem 1.5rem .4rem .5rem; border: 1px solid color-mix(in srgb,var(--text) 13%,transparent); border-radius: 999px; background: var(--bg); }
+    .cca703f { width: 22px; height: 22px; border-radius: 50%; object-fit: contain; flex: none; }
+    .c68ca57 { border: 0; background: transparent; color: var(--text); font: 600 .95rem/1 var(--body); cursor: pointer; appearance: none; -webkit-appearance: none; }
+    .c68ca57:focus { outline: 0; }
+    .c15418a::after { content: ""; position: absolute; right: .7rem; width: .42rem; height: .42rem; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(-2px) rotate(45deg); pointer-events: none; }
+    .c9e020a { margin-top: .4rem; color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
+    .c359c7d { position: relative; z-index: 1; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; margin: -.55rem auto; padding: 0; border: 3px solid var(--surface); border-radius: 50%; background: color-mix(in srgb,var(--accent) 13%,var(--surface)); color: var(--accent); cursor: pointer; transition: transform .2s ease, background .2s ease; }
+    .c359c7d svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .c359c7d:hover { transform: rotate(180deg); background: color-mix(in srgb,var(--accent) 20%,var(--surface)); }
+    .c1e7eb1 { display: grid; gap: .5rem; margin: 1rem 0 0; padding-top: .9rem; border-top: 1px solid color-mix(in srgb,var(--accent) 15%,transparent); font-size: .82rem; }
+    .c1e7eb1 div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; }
+    .c1e7eb1 dt { color: var(--muted); }
+    .c1e7eb1 dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .cac602c > .c5548a2 { width: 100%; margin-top: 1.05rem; }
+    .c5194a4 { padding: 2rem; border: 1px solid color-mix(in srgb,var(--text) 10%,transparent); border-radius: calc(var(--radius) * 1.3); background: var(--surface); }
+    .c401b21 { margin-bottom: 1.3rem; font-size: 1.65rem; font-weight: 550; letter-spacing: -.035em; }
+    .cd99c8f { max-width: 100%; overflow-x: auto; }
+    .cd17e9b { width: 100%; border-collapse: collapse; text-align: left; font-size: .92rem; }
+    .cd17e9b caption { padding-bottom: 1rem; text-align: left; color: var(--muted); }
+    .cd17e9b th, .cd17e9b td { padding: 1rem 1.1rem; border-bottom: 1px solid color-mix(in srgb,var(--text) 9%,transparent); vertical-align: top; overflow-wrap: anywhere; }
+    .cd17e9b th { color: var(--muted); font-weight: 500; }
+    .cd17e9b thead { background: color-mix(in srgb,var(--accent) 5%,var(--surface)); }
+    .cd17e9b tbody tr:last-child > * { border-bottom: 0; }
+    .cab3d0c { max-width: 820px; padding-block: 4rem 2rem; }
+    .c91b39e { margin-bottom: 3.3rem; }
+    .c12613e { margin: 0 0 1.1rem; font: 550 clamp(1.6rem,3vw,2.2rem)/1.2 var(--display); letter-spacing: -.035em; }
+    .cacc9c1 { color: var(--muted); line-height: 1.85; overflow-wrap: anywhere; }
+    .cacc9c1 p { margin-bottom: 1.2rem; }
+    .cacc9c1 strong, .cacc9c1 h3, .cacc9c1 h4 { color: var(--text); }
+    .cacc9c1 ul, .cacc9c1 ol { padding-left: 1.3rem; }
+    .cacc9c1 li { padding-left: .3rem; margin-block: .55rem; }
+    .cacc9c1 li::marker { color: var(--accent); }
+    .cacc9c1 blockquote { margin: 1.5rem 0; padding: 1rem 1.4rem; border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); color: var(--text); }
+    .cacc9c1 img { height: auto; border-radius: var(--radius); }
+    .cacc9c1 pre { overflow-x: auto; padding: 1rem; border-radius: var(--radius); background: var(--surface); }
+    .cacc9c1 code, .cacc9c1 pre { font-family: var(--body); }
+    .c4ccf6f { margin-block: .8rem; border: 1px solid color-mix(in srgb,var(--text) 11%,transparent); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+    .c3b6c0b { position: relative; padding: 1.3rem 3.5rem 1.3rem 1.4rem; list-style: none; cursor: pointer; color: var(--text); font: 550 1.04rem/1.5 var(--display); }
+    .c3b6c0b::-webkit-details-marker { display: none; }
+    .c3b6c0b::after { content: "+"; position: absolute; right: 1.4rem; top: 1.2rem; color: var(--accent); font-size: 1.3rem; }
+    details[open] > .c3b6c0b::after { content: "−"; }
+    .c4ccf6f[open] { border-color: color-mix(in srgb,var(--accent) 35%,var(--surface)); }
+    .c3b6c0b:focus-visible { outline-offset: -5px; }
+    .c5f00e7 { padding: 0 1.4rem 1.4rem; color: var(--muted); overflow-wrap: anywhere; }
+    .c5f00e7 > :last-child { margin-bottom: 0; }
+    .cb08258 { max-width: 820px; padding-block: 1.5rem 3.5rem; border-top: 1px solid color-mix(in srgb,var(--text) 12%,transparent); }
+    .cb08258 .c401b21 { font-size: 1.25rem; }
+    .c5d15b0 { margin: 0; padding-left: 1.25rem; color: var(--muted); font-size: .88rem; }
+    .c2a4177 { padding-block: .4rem; padding-left: .25rem; overflow-wrap: anywhere; }
+    .c2a4177 a, a.c2a4177 { color: var(--text); text-decoration-color: color-mix(in srgb,var(--accent) 45%,transparent); }
+    .c2a4177 a:hover, a.c2a4177:hover { color: var(--accent); }
+    .ccf5b61 { border-top: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
+    .cb34b0d { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; min-height: 96px; padding-block: 1.5rem; color: var(--muted); font-size: .8rem; }
+    .cb34b0d p { margin: 0; }
+    .cb34b0d a { color: var(--muted); }
+    @media (max-width: 850px) { .c5347f2 { grid-template-columns: minmax(0,1fr); gap: 2.5rem; padding-block: 2.5rem 3.5rem; } .cd2899d { max-width: 650px; } .cbb3db5 { width: 100%; max-width: 600px; justify-self: center; } h1 { font-size: clamp(2.5rem,7vw,4rem); } .c9ae096 { max-width: 60ch; } }
+    @media (max-width: 540px) { .c92e7cd { width: calc(100% - 2rem); } .ca4bfe8 { min-height: 76px; gap: .7rem; } .c9bafce { font-size: .95rem; gap: .45rem; } .c4650c0 { width: 2rem; height: 2rem; } .c798d5b { gap: .6rem; } .c798d5b > a:not(.c5548a2) { display: none; } .ca4bfe8 .c5548a2 { padding-inline: .85rem; font-size: .8rem; } .c5194a4 { padding: 1.25rem; } .cd17e9b th, .cd17e9b td { padding: .8rem .55rem; } .cd2899d > .c5548a2 { width: 100%; } .cab3d0c { padding-top: 2.8rem; } .cb34b0d { align-items: flex-start; flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .c5548a2, .amount-field { transition: none; } .c5548a2:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <a class="c5a2b20" href="#content">Skip to content</a>
+  <header class="c0ca913">
+    <nav class="ca4bfe8 c92e7cd" aria-label="Primary navigation">
+      <a class="c9bafce" href="#top" aria-label="Swap station, top of page">
+        <span class="c4650c0" aria-hidden="true"><svg class="cfc6f28" viewBox="0 0 24 24"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg></span>
+        Swap station
+      </a>
+      <div class="c798d5b">
+        <a href="#facts">Key facts</a>
+        <a href="#sources">Sources</a>
+        <a class="c5548a2" href="/dashboard/">Swap</a>
+      </div>
+    </nav>
+  </header>
+  <div class="c92e7cd" id="top">
+    <div class="c6cbbee"><nav class="c3db8b8" aria-label="Breadcrumb"><a href="/dashboard/">Home</a> <span>/</span> <span>Swaps</span> <span>/</span> <span>Swap XMR to USDT</span></nav></div>
+    <section class="c5347f2" aria-labelledby="hero-title">
+      <div class="cd2899d">
+        <p class="c5a5bbd">All swap routes</p>
+        <h1 id="hero-title">Swap XMR to <em>USDT</em></h1>
+        <p class="c9ae096">To swap XMR to USDT you send Monero to a one-time deposit address at an instant exchanger and receive Tether at a quoted rate, and the single decision that moves your result most is which USDT network you receive on — TRC-20 on Tron is cheap and fast, ERC-20 on Ethereum is widely accepted but costs far more in gas.</p>
+        <a class="c5548a2" href="/dashboard/">Swap <svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <aside class="cbb3db5 cac602c" data-from="XMR" aria-labelledby="widget-title">
+        <div class="c49c771">
+          <h2 id="widget-title">Swap</h2>
+          <span class="c2629d1">Best route</span>
+        </div>
+        <div class="c40cb4f">
+          <div class="ca662ef"><span class="c9e5ea5">You pay</span></div>
+          <div class="ca659a1">
+            <input id="pay-amount" class="c66678e" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="1" aria-label="Amount you pay">
+            <span class="c15418a">
+              <img class="cca703f" id="pay-ico" width="22" height="22" alt="" src="assets/tokens/eth.svg">
+              <select id="pay-token" class="c68ca57" aria-label="Token you pay"></select>
+            </span>
+          </div>
+          <div class="c9e020a" id="pay-usd">—</div>
+        </div>
+        <button type="button" class="c359c7d" id="swap-switch" aria-label="Switch the two tokens">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v13m0 0-3-3m3 3 3-3M17 20V7m0 0-3 3m3-3 3 3"/></svg>
+        </button>
+        <div class="c40cb4f">
+          <div class="ca662ef"><span class="c9e5ea5">You receive</span></div>
+          <div class="ca659a1">
+            <output id="get-amount" class="c66678e" for="pay-amount">—</output>
+            <span class="c15418a">
+              <img class="cca703f" id="get-ico" width="22" height="22" alt="" src="assets/tokens/usdt.svg">
+              <select id="get-token" class="c68ca57" aria-label="Token you receive"></select>
+            </span>
+          </div>
+          <div class="c9e020a" id="get-usd">—</div>
+        </div>
+        <dl class="c1e7eb1">
+          <div><dt>Rate</dt><dd id="swap-rate">—</dd></div>
+          <div><dt>Network fee</dt><dd id="swap-fee">0.3%</dd></div>
+        </dl>
+        <noscript><p class="ce703d6">Enable JavaScript to estimate the swap.</p></noscript>
+        <a class="c5548a2" href="/dashboard/">Swap <svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </aside>
+    </section>
+    <section class="c5194a4" id="facts" aria-labelledby="facts-title">
+      <h2 class="c401b21" id="facts-title">Key facts</h2>
+      <div class="cd99c8f"><table class="cd17e9b"><tbody><tr><th scope="row">Pair</th><td>XMR to USDT, or the reverse</td></tr>
+<tr><th scope="row">USDT networks</th><td>TRC-20 (Tron), ERC-20 (Ethereum), plus BEP-20, Solana</td></tr>
+<tr><th scope="row">Typical time</th><td>10-30 minutes, mostly XMR confirmations</td></tr>
+<tr><th scope="row">KYC</th><td>None on instant exchangers; required on CEXs</td></tr>
+<tr><th scope="row">Fees</th><td>Exchanger float plus the chosen network's withdrawal fee</td></tr>
+<tr><th scope="row">Min amount</th><td>Set per exchanger, rises with ERC-20 gas</td></tr></tbody></table></div>
+    </section>
+  </div>
+  <main class="cab3d0c c92e7cd" id="content">
+    <section class="c91b39e"><h2 class="c12613e">Why Swap XMR to USDT at All</h2><div class="cacc9c1"><strong>You swap XMR to USDT to freeze a volatile position into a dollar-pegged stablecoin without touching a bank or passing identity checks.</strong> Monero's price can move several percent in a day, so holders who want to lock in a level, sit out a dip, or prepare funds for a later purchase convert into Tether rather than cashing out to fiat. USDT keeps the balance liquid and transferable across chains while removing the price swing, and because the swap runs through a non-custodial exchanger, no order book or verified account ever holds your coins. The trade is a de-risking move, not an exit from crypto entirely.<h3>De-Risking Without Fiat</h3>Converting to fiat means a bank, a KYC check, and often a multi-day settlement. Moving XMR into USDT instead keeps everything on-chain: the dollar value is locked the moment the swap completes, yet the balance stays as a crypto asset you can redeploy in seconds whenever you decide to buy back in.<h3>What USDT Actually Is</h3>USDT, or Tether, is a token that tracks the US dollar one-to-one and lives on several blockchains at once. The same dollar peg exists as separate tokens on Tron, Ethereum, BNB Chain, and Solana, which is exactly why the network you receive on is a real decision rather than a formality, as Tether itself documents on its transparency pages.</div></section>
+<section class="c91b39e"><h2 class="c12613e">The USDT Network Choice Decides Your Fees</h2><div class="cacc9c1">Tether is not a single coin on a single chain. The same dollar peg is issued as a distinct token on each network it runs on, and the network you select when you swap XMR to USDT sets how much you pay to receive and later move that balance. Receiving USDT as ERC-20 on Ethereum can cost many dollars in gas during busy periods, while TRC-20 on Tron typically costs cents. The peg value is identical; the cost and speed of handling it are not. Pick the network before you request the quote, because the deposit address and the withdrawal fee both depend on it.<table><thead><tr><th>USDT Network</th><th>Typical Fee</th><th>Speed</th><th>Notes</th></tr></thead><tbody><tr><td>TRC-20 (Tron)</td><td>~1 USDT or less</td><td>Seconds to 1 min</td><td>Cheapest and fastest; widely accepted by exchangers</td></tr><tr><td>ERC-20 (Ethereum)</td><td>Several USDT in gas</td><td>1-5 min</td><td>Most universally supported; costly when Ethereum is busy</td></tr><tr><td>BEP-20 (BNB Chain)</td><td>Well under 1 USDT</td><td>Seconds</td><td>Cheap, but confirm your wallet and receiver support it</td></tr><tr><td>SPL (Solana)</td><td>Fractions of a cent</td><td>Seconds</td><td>Very cheap and quick; fewer services accept it</td></tr></tbody></table><h3>When ERC-20 Still Makes Sense</h3>Choose ERC-20 only when the place you are sending USDT next accepts nothing else — some older services, custodians, or DeFi positions are Ethereum-only. If you control where the funds go, there is rarely a reason to pay Ethereum gas to receive a stablecoin.<h3>Why TRC-20 Usually Wins</h3>For a plain store-of-value swap, TRC-20 moves USDT for a fraction of ERC-20's cost and confirms almost instantly, and nearly every instant exchanger and wallet supports it. Verify the receiving wallet lists a Tron address for USDT before you commit, since a Tron token cannot land in an Ethereum-only address.</div></section>
+<section class="c91b39e"><h2 class="c12613e">Route Options: Instant Exchanger vs CEX</h2><div class="cacc9c1">There are two realistic ways to swap XMR to USDT, and they differ most in whether you surrender identity and custody. An instant, non-custodial exchanger takes your Monero at a one-time address and returns USDT with no account; a centralized exchange (CEX) makes you register, verify identity, deposit XMR into its wallet, trade, then withdraw. The exchanger route is faster to start and private; the CEX route gives an order book and a paper trail at the cost of KYC and holding your funds in the meantime.<table><thead><tr><th>Route</th><th>KYC</th><th>Speed to Start</th><th>Custody</th></tr></thead><tbody><tr><td>Instant exchanger</td><td>None</td><td>Immediate, no sign-up</td><td>Non-custodial, one-time address</td></tr><tr><td>CEX account</td><td>Full identity check</td><td>Hours to days for approval</td><td>Exchange holds your balance</td></tr></tbody></table><h3>Instant Exchanger Flow</h3>The exchanger generates a single-use Monero deposit address the moment you quote, watches it for the required confirmations, and sends USDT to the address you supplied on the network you chose. Nothing sits in a shared balance and there is no login — a swap ID is the only reference you keep.<h3>CEX Flow and Its Cost</h3>A CEX lists XMR against USDT on an order book, so you can place limit orders and see depth, but Monero pairs are increasingly delisted on regulated venues, and every step from deposit to withdrawal is tied to a verified identity. You trade privacy and self-custody for order types and a dispute history.</div></section>
+<section class="c91b39e"><h2 class="c12613e">Timing the Swap to Protect the Peg Value</h2><div class="cacc9c1">The point of moving XMR into USDT is to lock a dollar figure, so timing matters more here than on a crypto-to-crypto swap where both legs float. The rate you lock is the Monero price at the moment the exchanger quotes or detects your deposit, which means a sharp XMR move while your transaction waits in the mempool changes how many dollars you end up with. A fixed-rate quote reserves the output for a short window and shields you from that movement; a floating-rate quote applies the live price when your deposit confirms. For a de-risking swap, the fixed-rate option usually fits the intent better, because you are trying to capture a specific level rather than chase the best average. Live XMR pricing is easy to check against an independent source such as CoinGecko before you send, so you know whether the quote reflects the market or lags it.<ul><li>Check the live XMR price against an independent tracker before quoting.</li><li>Prefer a fixed-rate quote when the goal is to lock a specific dollar level.</li><li>Send promptly after quoting, since fixed windows expire in minutes.</li><li>Expect most of the wait to be Monero's own confirmations, not the USDT payout.</li></ul></div></section>
+<section class="c91b39e"><h2 class="c12613e">Doing the XMR to USDT Swap Step by Step</h2><div class="cacc9c1">Once the network and route are chosen, the sequence is short and the same every time, which is what makes converting XMR to USDT repeatable rather than nerve-wracking.<ul><li>Choose the USDT network first — TRC-20 for low cost, ERC-20 only if the receiver demands it.</li><li>Enter the XMR amount and select a fixed-rate quote to lock the dollar value.</li><li>Paste your USDT receiving address for the exact network you picked, and double-check it matches.</li><li>Copy the one-time Monero deposit address and send the precise quoted amount from your wallet.</li><li>Save the swap ID, then wait for Monero confirmations; USDT is released automatically once they clear.</li></ul></div></section>
+<section class="c91b39e"><h2 class="c12613e">What You Actually Receive After Fees</h2><div class="cacc9c1">The USDT that lands is the quoted output minus two separate costs, and conflating them is how people are surprised by the final number. The first is the exchanger's float, the margin baked into the rate itself, which is the same regardless of network. The second is the network withdrawal fee for the USDT chain you selected, and this is where the ERC-20 versus TRC-20 gap shows up most sharply — the identical dollar amount of Monero can net you noticeably more USDT on Tron than on Ethereum purely because the payout fee is smaller. On small swaps the network fee dominates, which is why exchangers set higher minimums for ERC-20 payouts than for TRC-20: a ten-dollar swap paid out on Ethereum could lose most of its value to gas, so the exchanger refuses it rather than return dust.<h3>Reading the Breakdown Before Sending</h3>A good quote shows the output amount and the payout network together, so the fee is visible before you commit. Treat the network line as part of the price, not an afterthought: switching the same swap from ERC-20 to TRC-20 often changes the amount received more than shopping between exchangers would.<h3>Confirming the USDT Arrived</h3>Once the exchanger reports the payout, you can verify it independently on the chain you chose — a Tron explorer such as Tronscan for TRC-20, or Etherscan for ERC-20 — by searching your receiving address. The status page and the on-chain record should match before you consider the swap finished.</div></section>
+<section class="c91b39e"><h2 class="c12613e">Risks and Edge Cases When Swapping to USDT</h2><div class="cacc9c1">Most problems with an XMR to USDT swap come from the network choice and the receiving address rather than the Monero side, which is well-understood and simply slow to confirm. The commonest mistake is pasting a USDT address for the wrong chain — a Tron address where an Ethereum token is being sent, or the reverse — which can strand funds, since a token issued on one network cannot settle on another even if the address string looks superficially valid. Underpaying the deposit usually yields a smaller recalculated output rather than a cancellation, while overpaying is refunded to a return address you supply. The USDT peg itself is extremely stable but is not a government-backed guarantee, so holding Tether is holding an issuer's dollar claim rather than cash. For a short-term de-risking swap that distinction rarely bites, but it is worth knowing the balance you receive is a token tracking the dollar, not the dollar itself.<h3>Address and Network Must Agree</h3>Before sending any Monero, confirm the receiving wallet shows a USDT address on the exact network you selected in the quote. The deposit address the exchanger gives you is for Monero; the payout address you provide must be a USDT address on the matching chain, or the output has nowhere valid to land.<h3>Keep the Swap ID Until Confirmed</h3>The swap ID is the only handle on a no-account trade. Save it the instant it appears, because if a payout is delayed or a network issue slows confirmation, support will ask for that ID first, and the status page tied to it is how you reopen the transaction without any login.</div></section><section class="c91b39e cae6441" id="cluster"><h2 class="c12613e">More in this series</h2><div class="cacc9c1"><ul><li><a href="/">XMR Swap</a></li><li><a href="/swap-xmr-to-btc/">Swap XMR to BTC</a></li><li><a href="/swap-xmr-to-ltc/">Swap XMR to LTC</a></li><li><a href="/swap-xmr-to-theta/">How to Swap XMR to Theta</a></li></ul></div></section>
+    <details class="c4ccf6f"><summary class="c3b6c0b">How do I swap XMR to USDT without KYC?</summary><div class="c5f00e7"><strong>Use a non-custodial instant exchanger: send Monero to its one-time deposit address and receive USDT with no account or identity check.</strong> Choose the USDT network first, paste a matching receiving address, and the payout is sent once Monero confirms.</div></details>
+<details class="c4ccf6f"><summary class="c3b6c0b">Which USDT network should I choose when swapping from XMR?</summary><div class="c5f00e7">TRC-20 on Tron is cheapest and fastest and fits most purposes. Pick ERC-20 on Ethereum only when the place you are sending USDT accepts nothing else, since Ethereum gas can cost many times more.</div></details>
+<details class="c4ccf6f"><summary class="c3b6c0b">Why does the USDT network affect how much I receive?</summary><div class="c5f00e7">The dollar peg is identical on every chain, but each network charges its own withdrawal fee. A payout on Ethereum costs several dollars in gas while the same payout on Tron costs cents, so the net USDT received differs by network.</div></details>
+<details class="c4ccf6f"><summary class="c3b6c0b">How long does it take to swap XMR to USDT?</summary><div class="c5f00e7">Usually ten to thirty minutes. Most of that is Monero's own confirmation time on your deposit; once it clears, the USDT payout is sent automatically and lands within seconds to a few minutes depending on the network.</div></details>
+<details class="c4ccf6f"><summary class="c3b6c0b">Is swapping XMR to USDT a way to escape volatility?</summary><div class="c5f00e7">Yes. USDT tracks the US dollar, so converting Monero into it locks the current dollar value while keeping the balance as an on-chain, transferable asset you can redeploy later without a bank or fiat withdrawal.</div></details>
+<details class="c4ccf6f"><summary class="c3b6c0b">What if I send the wrong USDT network address?</summary><div class="c5f00e7">A USDT token issued on one chain cannot settle on an address for a different chain, which can strand funds. Always confirm the receiving wallet shows a USDT address on the exact network you selected before sending any Monero.</div></details>
+<details class="c4ccf6f"><summary class="c3b6c0b">Instant exchanger or centralized exchange for XMR to USDT?</summary><div class="c5f00e7">An instant exchanger is faster to start, needs no account, and is non-custodial. A centralized exchange offers an order book and a paper trail but requires identity verification and holds your funds, and increasingly delists Monero pairs.</div></details>
+  </main>
+  <section class="cb08258 c92e7cd" id="sources" aria-labelledby="sources-title">
+    <h2 class="c401b21" id="sources-title">Sources</h2>
+    <ul class="c5d15b0"><li><a class="c2a4177" href="https://www.getmonero.org/" rel="nofollow noopener" target="_blank">Monero project</a></li>
+<li><a class="c2a4177" href="https://tether.to/" rel="nofollow noopener" target="_blank">Tether (USDT) official site</a></li>
+<li><a class="c2a4177" href="https://www.coingecko.com/" rel="nofollow noopener" target="_blank">CoinGecko</a></li>
+<li><a class="c2a4177" href="https://tronscan.org/" rel="nofollow noopener" target="_blank">Tronscan (Tron explorer)</a></li>
+<li><a class="c2a4177" href="https://etherscan.io/" rel="nofollow noopener" target="_blank">Etherscan (Ethereum explorer)</a></li>
+<li><a class="c2a4177" href="https://academy.binance.com/" rel="nofollow noopener" target="_blank">Binance Academy</a></li></ul>
+  </section>
+  <footer class="ccf5b61">
+    <div class="cb34b0d c92e7cd">
+      <p>Updated Oct 12, 2026</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const TOKENS = [
+        { s: 'ETH', f: 'eth', p: 2550 }, { s: 'BTC', f: 'btc', p: 62000 },
+        { s: 'USDT', f: 'usdt', p: 1 }, { s: 'USDC', f: 'usdc', p: 1 },
+        { s: 'BNB', f: 'bnb', p: 585 }, { s: 'SOL', f: 'sol', p: 145 },
+        { s: 'ARB', f: 'arb', p: 0.62 }, { s: 'OP', f: 'optimism', p: 1.65 },
+        { s: 'MATIC', f: 'polygon', p: 0.42 }, { s: 'AVAX', f: 'avalanche', p: 27 },
+        { s: 'SUI', f: 'sui', p: 1.35 }, { s: 'LTC', f: 'ltc', p: 72 },
+        { s: 'TRX', f: 'trx', p: 0.16 }, { s: 'XMR', f: 'xmr', p: 155 },
+        { s: 'XRP', f: 'xrp', p: 0.52 }, { s: 'ZEC', f: 'zec', p: 32 }
+      ];
+      const FEE = 0.003;
+      const $ = (id) => document.getElementById(id);
+      const payAmt = $('pay-amount'), payTok = $('pay-token'), payUsd = $('pay-usd'), payIco = $('pay-ico');
+      const getAmt = $('get-amount'), getTok = $('get-token'), getUsd = $('get-usd'), getIco = $('get-ico');
+      const rateEl = $('swap-rate');
+      const tok = (s) => TOKENS.find((t) => t.s === s);
+      const num = (n) => new Intl.NumberFormat('en', { maximumFractionDigits: n >= 1 ? 4 : 6 }).format(n);
+      const usd = (v) => '~$' + new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
+      TOKENS.forEach((t) => {
+        [payTok, getTok].forEach((sel) => { const o = document.createElement('option'); o.value = t.s; o.textContent = t.s; sel.appendChild(o); });
+      });
+      const widget = document.querySelector('.cac602c');
+      const defFrom = (widget && widget.dataset.from) || 'ETH';
+      const fromOk = TOKENS.some((t) => t.s === defFrom) ? defFrom : 'ETH';
+      payTok.value = fromOk;
+      getTok.value = (fromOk === 'USDT') ? 'ETH' : 'USDT';
+      const calc = () => {
+        const pf = tok(payTok.value), gt = tok(getTok.value);
+        payIco.src = 'assets/tokens/' + pf.f + '.svg'; payIco.alt = pf.s;
+        getIco.src = 'assets/tokens/' + gt.f + '.svg'; getIco.alt = gt.s;
+        rateEl.textContent = '1 ' + pf.s + ' ≈ ' + num(pf.p / gt.p) + ' ' + gt.s;
+        const a = parseFloat(payAmt.value);
+        if (!Number.isFinite(a) || a <= 0) { getAmt.textContent = '—'; payUsd.textContent = '—'; getUsd.textContent = '—'; return; }
+        const out = a * (pf.p / gt.p) * (1 - FEE);
+        getAmt.textContent = num(out) + ' ' + gt.s;
+        payUsd.textContent = usd(a * pf.p);
+        getUsd.textContent = usd(out * gt.p);
+      };
+      const distinct = (changed, other) => { if (changed.value === other.value) { other.value = (TOKENS.find((t) => t.s !== changed.value) || TOKENS[0]).s; } };
+      payAmt.addEventListener('input', calc);
+      payTok.addEventListener('change', () => { distinct(payTok, getTok); calc(); });
+      getTok.addEventListener('change', () => { distinct(getTok, payTok); calc(); });
+      $('swap-switch').addEventListener('click', () => { const t = payTok.value; payTok.value = getTok.value; getTok.value = t; calc(); });
+      calc();
+    })();
+  </script>
+</body>
+</html>

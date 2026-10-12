@@ -1,0 +1,3 @@
+# Swap XMR to USDT
+
+Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.
