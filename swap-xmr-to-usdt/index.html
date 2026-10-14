@@ -7,6 +7,7 @@
   <meta name="description" content="Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.">
   <link rel="canonical" href="https://swap-xmr.github.io/swap-xmr-to-usdt/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Website">
   <meta property="og:title" content="Swap XMR to USDT Instantly">
   <meta property="og:description" content="Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.">
   <meta property="og:url" content="https://swap-xmr.github.io/swap-xmr-to-usdt/">
@@ -15,293 +16,597 @@
   <meta name="twitter:title" content="Swap XMR to USDT Instantly">
   <meta name="twitter:description" content="Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.">
   <meta name="twitter:image" content="https://swap-xmr.github.io/og.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://swap-xmr.github.io/#website", "url": "https://swap-xmr.github.io/swap-xmr-to-usdt/", "name": "Swap XMR to USDT — Instant, No-KYC Stablecoin Exit"}, {"@type": "WebPage", "@id": "https://swap-xmr.github.io/#webpage", "url": "https://swap-xmr.github.io/swap-xmr-to-usdt/", "name": "Swap XMR to USDT — Instant, No-KYC Stablecoin Exit", "isPartOf": {"@id": "https://swap-xmr.github.io/#website"}, "description": "Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.", "datePublished": "2026-10-12", "dateModified": "2026-10-12"}, {"@type": "SoftwareApplication", "name": "Swap XMR to USDT", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://swap-xmr.github.io/swap-xmr-to-usdt/"}, {"@type": "ListItem", "position": 2, "name": "Swaps"}, {"@type": "ListItem", "position": 3, "name": "Swap XMR to USDT"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I swap XMR to USDT without KYC?", "acceptedAnswer": {"@type": "Answer", "text": "Use a non-custodial instant exchanger: send Monero to its one-time deposit address and receive USDT with no account or identity check. Choose the USDT network first, paste a matching receiving address, and the payout is sent once Monero confirms."}}, {"@type": "Question", "name": "Which USDT network should I choose when swapping from XMR?", "acceptedAnswer": {"@type": "Answer", "text": "TRC-20 on Tron is cheapest and fastest and fits most purposes. Pick ERC-20 on Ethereum only when the place you are sending USDT accepts nothing else, since Ethereum gas can cost many times more."}}, {"@type": "Question", "name": "Why does the USDT network affect how much I receive?", "acceptedAnswer": {"@type": "Answer", "text": "The dollar peg is identical on every chain, but each network charges its own withdrawal fee. A payout on Ethereum costs several dollars in gas while the same payout on Tron costs cents, so the net USDT received differs by network."}}, {"@type": "Question", "name": "How long does it take to swap XMR to USDT?", "acceptedAnswer": {"@type": "Answer", "text": "Usually ten to thirty minutes. Most of that is Monero's own confirmation time on your deposit; once it clears, the USDT payout is sent automatically and lands within seconds to a few minutes depending on the network."}}, {"@type": "Question", "name": "Is swapping XMR to USDT a way to escape volatility?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. USDT tracks the US dollar, so converting Monero into it locks the current dollar value while keeping the balance as an on-chain, transferable asset you can redeploy later without a bank or fiat withdrawal."}}, {"@type": "Question", "name": "What if I send the wrong USDT network address?", "acceptedAnswer": {"@type": "Answer", "text": "A USDT token issued on one chain cannot settle on an address for a different chain, which can strand funds. Always confirm the receiving wallet shows a USDT address on the exact network you selected before sending any Monero."}}, {"@type": "Question", "name": "Instant exchanger or centralized exchange for XMR to USDT?", "acceptedAnswer": {"@type": "Answer", "text": "An instant exchanger is faster to start, needs no account, and is non-custodial. A centralized exchange offers an order book and a paper trail but requires identity verification and holds your funds, and increasingly delists Monero pairs."}}]}]}</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='currentColor' d='M5 7h9v9H5zm13 0h9v9h-9zM5 20h22v5H5z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://swap-xmr.github.io/#website", "url": "https://swap-xmr.github.io/swap-xmr-to-usdt/", "name": "Swap XMR to USDT — Instant, No-KYC Stablecoin Exit"}, {"@type": "WebPage", "@id": "https://swap-xmr.github.io/#webpage", "url": "https://swap-xmr.github.io/swap-xmr-to-usdt/", "name": "Swap XMR to USDT — Instant, No-KYC Stablecoin Exit", "isPartOf": {"@id": "https://swap-xmr.github.io/#website"}, "description": "Swap XMR to USDT instantly with no KYC. Lock volatile Monero into a stablecoin, pick the right USDT network (ERC-20 vs TRC-20), and keep more after fees.", "datePublished": "2026-10-14", "dateModified": "2026-10-14"}, {"@type": "SoftwareApplication", "name": "Swap XMR to USDT", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://swap-xmr.github.io/swap-xmr-to-usdt/"}, {"@type": "ListItem", "position": 2, "name": "Swaps"}, {"@type": "ListItem", "position": 3, "name": "Swap XMR to USDT"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I swap XMR to USDT without KYC?", "acceptedAnswer": {"@type": "Answer", "text": "Use a non-custodial instant exchanger: send Monero to its one-time deposit address and receive USDT with no account or identity check. Choose the USDT network first, paste a matching receiving address, and the payout is sent once Monero confirms."}}, {"@type": "Question", "name": "Which USDT network should I choose when swapping from XMR?", "acceptedAnswer": {"@type": "Answer", "text": "TRC-20 on Tron is cheapest and fastest and fits most purposes. Pick ERC-20 on Ethereum only when the place you are sending USDT accepts nothing else, since Ethereum gas can cost many times more."}}, {"@type": "Question", "name": "Why does the USDT network affect how much I receive?", "acceptedAnswer": {"@type": "Answer", "text": "The dollar peg is identical on every chain, but each network charges its own withdrawal fee. A payout on Ethereum costs several dollars in gas while the same payout on Tron costs cents, so the net USDT received differs by network."}}, {"@type": "Question", "name": "How long does it take to swap XMR to USDT?", "acceptedAnswer": {"@type": "Answer", "text": "Usually ten to thirty minutes. Most of that is Monero's own confirmation time on your deposit; once it clears, the USDT payout is sent automatically and lands within seconds to a few minutes depending on the network."}}, {"@type": "Question", "name": "Is swapping XMR to USDT a way to escape volatility?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. USDT tracks the US dollar, so converting Monero into it locks the current dollar value while keeping the balance as an on-chain, transferable asset you can redeploy later without a bank or fiat withdrawal."}}, {"@type": "Question", "name": "What if I send the wrong USDT network address?", "acceptedAnswer": {"@type": "Answer", "text": "A USDT token issued on one chain cannot settle on an address for a different chain, which can strand funds. Always confirm the receiving wallet shows a USDT address on the exact network you selected before sending any Monero."}}, {"@type": "Question", "name": "Instant exchanger or centralized exchange for XMR to USDT?", "acceptedAnswer": {"@type": "Answer", "text": "An instant exchanger is faster to start, needs no account, and is non-custodial. A centralized exchange offers an order book and a paper trail but requires identity verification and holds your funds, and increasingly delists Monero pairs."}}]}]}</script>
   <style>
-    :root{--bg:#09100E;--surface:#12201B;--text:#E7F3EC;--muted:#83968C;--accent:#2DD4A7;--accent-ink:#04201A;--radius:16px;--display:"Manrope";--body:"Manrope"}
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
-    body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--body); -webkit-font-smoothing: antialiased; }
-    a { color: var(--accent); text-underline-offset: .22em; }
-    a:hover { text-decoration-thickness: .12em; }
-    :focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
-    ::selection { background: var(--accent); color: var(--accent-ink); }
-    h1, h2, h3, h4, h5, h6 { font-family: var(--display); line-height: 1.15; text-wrap: balance; }
-    p, h1, h2, h3 { margin-top: 0; }
-    img, svg { max-width: 100%; vertical-align: middle; }
-    .c92e7cd { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
-    .c5a2b20 { position: absolute; z-index: 5; top: .5rem; left: 1rem; padding: .7rem 1rem; background: var(--surface); transform: translateY(-180%); border-radius: var(--radius); }
-    .c5a2b20:focus { transform: translateY(0); }
-    .c0ca913 { border-bottom: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
-    .ca4bfe8 { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
-    .c9bafce { display: inline-flex; align-items: center; gap: .7rem; color: var(--text); font: 650 1.12rem/1.2 var(--display); text-decoration: none; }
-    .c4650c0 { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: calc(var(--radius) * .6); background: var(--accent); color: var(--accent-ink); }
-    .cfc6f28 { width: 1.2rem; height: 1.2rem; fill: none; stroke: var(--accent-ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
-    .c798d5b { display: flex; align-items: center; gap: 1.8rem; }
-    .c798d5b > a { font-size: .88rem; font-weight: 600; text-decoration: none; }
-    .c798d5b > a:not(.c5548a2) { color: var(--muted); }
-    .c5548a2 { display: inline-flex; align-items: center; justify-content: center; gap: .8rem; min-height: 52px; padding: .85rem 1.4rem; border: 1px solid color-mix(in srgb,var(--accent-ink) 12%,transparent); border-radius: var(--radius); background: linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 88%,var(--text))); color: var(--accent-ink); font: 650 .95rem/1.3 var(--body); text-decoration: none; box-shadow: 0 6px 18px color-mix(in srgb,var(--accent) 17%,transparent); transition: transform .18s ease, box-shadow .18s ease; }
-    .c5548a2:hover { transform: translateY(-2px); box-shadow: 0 9px 24px color-mix(in srgb,var(--accent) 25%,transparent); }
-    .ca4bfe8 .c5548a2 { min-height: 42px; padding: .65rem 1rem; }
-    .c6cbbee { padding-block: 1rem 0; color: var(--muted); font-size: .8rem; overflow-wrap: anywhere; }
-    .c3db8b8 { color: var(--muted); }
-    .c3db8b8 a, a.c3db8b8 { color: var(--muted); text-decoration: none; }
-    .c3db8b8 a:hover, a.c3db8b8:hover { color: var(--accent); text-decoration: underline; }
-    .c3db8b8 ol, .c3db8b8 ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: 0; margin: 0; list-style: none; }
-    .c5347f2 { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: clamp(2rem,5vw,4.5rem); align-items: start; padding-block: 1.5rem 3rem; }
-    .c5a5bbd { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.3rem; color: var(--accent); font-size: .86rem; font-weight: 600; }
-    .c5a5bbd::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb,var(--accent) 9%,transparent); }
-    h1 { margin-bottom: 1.4rem; font-size: clamp(2.5rem,4.7vw,4.35rem); font-weight: 600; letter-spacing: -.055em; overflow-wrap: anywhere; }
-    h1 em { color: var(--accent); font-style: normal; }
-    .c9ae096 { max-width: 48ch; margin-bottom: 2rem; color: var(--muted); font-size: 1.08rem; line-height: 1.8; }
-    .cbb3db5 { position: relative; min-width: 0; padding: clamp(1.1rem,2.4vw,1.5rem); border: 1px solid color-mix(in srgb,var(--accent) 20%,var(--surface)); border-radius: calc(var(--radius) * 1.6); background: linear-gradient(155deg,color-mix(in srgb,var(--accent) 7%,var(--surface)),var(--surface) 40%); box-shadow: 0 24px 64px color-mix(in srgb,var(--text) 9%,transparent),0 4px 12px color-mix(in srgb,var(--accent) 6%,transparent); }
-    .c49c771 { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .7rem; margin-bottom: 1rem; }
-    .c49c771 h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.035em; }
-    .c2629d1 { display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .65rem; border: 1px solid color-mix(in srgb,var(--accent) 16%,transparent); border-radius: 999px; background: color-mix(in srgb,var(--accent) 8%,var(--surface)); color: var(--accent); font-size: .72rem; font-weight: 600; }
-    .c2629d1::before { content: ""; width: .35rem; height: .35rem; border-radius: 50%; background: var(--accent); }
-    .route { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: .8rem; padding: .8rem; margin-bottom: 1rem; border: 1px solid color-mix(in srgb,var(--text) 9%,transparent); border-radius: var(--radius); background: var(--surface); }
-    .endpoint { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; }
-    .endpoint:last-child { align-items: flex-end; }
-    .endpoint-label, .c9e5ea5 { color: var(--muted); font-size: .78rem; font-weight: 500; }
-    .logo { display: flex; align-items: center; min-height: 36px; max-width: 100%; overflow-wrap: anywhere; font: 600 1rem/1.3 var(--display); }
-    .logo img, .logo svg { max-height: 36px; width: auto; max-width: 100%; object-fit: contain; }
-    .route-arrow { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: color-mix(in srgb,var(--accent) 9%,var(--surface)); }
-    .route-arrow .cfc6f28 { stroke: var(--accent); }
-    .c9e5ea5 { display: block; margin-bottom: .5rem; color: var(--text); }
-    .amount-field { display: flex; align-items: center; gap: .75rem; padding: .8rem 1rem; border: 1px solid color-mix(in srgb,var(--text) 18%,transparent); border-radius: var(--radius); background: var(--bg); transition: border-color .18s ease; }
-    .amount-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent); }
-    .amount-field input { width: 100%; min-width: 0; padding: .2rem 0; border: 0; background: var(--bg); color: var(--text); font: 550 1.6rem/1.2 var(--display); font-variant-numeric: tabular-nums; }
-    .amount-field input:focus { outline: 0; }
-    .unit { color: var(--muted); font-size: .8rem; }
-    .ce703d6 { margin: .45rem 0 .85rem; color: var(--muted); font-size: .74rem; }
-    .field-error { margin: .5rem 0; color: var(--text); font-size: .8rem; font-weight: 600; }
-    [hidden] { display: none !important; }
-    .estimate { padding: 1rem; border-radius: var(--radius); background: linear-gradient(120deg,color-mix(in srgb,var(--accent) 12%,var(--surface)),color-mix(in srgb,var(--accent) 4%,var(--surface))); }
-    .estimate-label { margin-bottom: .25rem; color: var(--muted); font-size: .8rem; }
-    .estimate-value { display: block; color: var(--text); font: 600 clamp(1.7rem,3vw,2.5rem)/1.3 var(--display); letter-spacing: -.04em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
-    .estimate-value small { color: var(--muted); font: 400 .8rem/1.4 var(--body); letter-spacing: 0; }
-    .estimate dl { display: grid; gap: .5rem; margin: .8rem 0 0; padding-top: .8rem; border-top: 1px solid color-mix(in srgb,var(--accent) 15%,transparent); font-size: .8rem; }
-    .estimate dl div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; }
-    .estimate dt { color: var(--muted); }
-    .estimate dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
-    .method { margin-block: .7rem; color: var(--muted); font-size: .75rem; }
-    .method summary { width: fit-content; color: var(--text); cursor: pointer; }
-    .method p { margin: .65rem 0 0; }
-    .cbb3db5 > .c5548a2 { width: 100%; }
-    .c40cb4f { padding: .8rem 1rem; border: 1px solid color-mix(in srgb,var(--text) 10%,transparent); border-radius: var(--radius); background: var(--surface); }
-    .ca662ef { margin-bottom: .45rem; }
-    .ca659a1 { display: flex; align-items: center; gap: .75rem; }
-    .c66678e { flex: 1; min-width: 0; padding: 0; border: 0; background: transparent; color: var(--text); font: 550 1.55rem/1.2 var(--display); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
-    .c66678e:focus { outline: 0; }
-    .c15418a { position: relative; display: inline-flex; align-items: center; gap: .5rem; flex: none; padding: .4rem 1.5rem .4rem .5rem; border: 1px solid color-mix(in srgb,var(--text) 13%,transparent); border-radius: 999px; background: var(--bg); }
-    .cca703f { width: 22px; height: 22px; border-radius: 50%; object-fit: contain; flex: none; }
-    .c68ca57 { border: 0; background: transparent; color: var(--text); font: 600 .95rem/1 var(--body); cursor: pointer; appearance: none; -webkit-appearance: none; }
-    .c68ca57:focus { outline: 0; }
-    .c15418a::after { content: ""; position: absolute; right: .7rem; width: .42rem; height: .42rem; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(-2px) rotate(45deg); pointer-events: none; }
-    .c9e020a { margin-top: .4rem; color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
-    .c359c7d { position: relative; z-index: 1; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; margin: -.55rem auto; padding: 0; border: 3px solid var(--surface); border-radius: 50%; background: color-mix(in srgb,var(--accent) 13%,var(--surface)); color: var(--accent); cursor: pointer; transition: transform .2s ease, background .2s ease; }
-    .c359c7d svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .c359c7d:hover { transform: rotate(180deg); background: color-mix(in srgb,var(--accent) 20%,var(--surface)); }
-    .c1e7eb1 { display: grid; gap: .5rem; margin: 1rem 0 0; padding-top: .9rem; border-top: 1px solid color-mix(in srgb,var(--accent) 15%,transparent); font-size: .82rem; }
-    .c1e7eb1 div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem 1rem; }
-    .c1e7eb1 dt { color: var(--muted); }
-    .c1e7eb1 dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
-    .cac602c > .c5548a2 { width: 100%; margin-top: 1.05rem; }
-    .c5194a4 { padding: 2rem; border: 1px solid color-mix(in srgb,var(--text) 10%,transparent); border-radius: calc(var(--radius) * 1.3); background: var(--surface); }
-    .c401b21 { margin-bottom: 1.3rem; font-size: 1.65rem; font-weight: 550; letter-spacing: -.035em; }
-    .cd99c8f { max-width: 100%; overflow-x: auto; }
-    .cd17e9b { width: 100%; border-collapse: collapse; text-align: left; font-size: .92rem; }
-    .cd17e9b caption { padding-bottom: 1rem; text-align: left; color: var(--muted); }
-    .cd17e9b th, .cd17e9b td { padding: 1rem 1.1rem; border-bottom: 1px solid color-mix(in srgb,var(--text) 9%,transparent); vertical-align: top; overflow-wrap: anywhere; }
-    .cd17e9b th { color: var(--muted); font-weight: 500; }
-    .cd17e9b thead { background: color-mix(in srgb,var(--accent) 5%,var(--surface)); }
-    .cd17e9b tbody tr:last-child > * { border-bottom: 0; }
-    .cab3d0c { max-width: 820px; padding-block: 4rem 2rem; }
-    .c91b39e { margin-bottom: 3.3rem; }
-    .c12613e { margin: 0 0 1.1rem; font: 550 clamp(1.6rem,3vw,2.2rem)/1.2 var(--display); letter-spacing: -.035em; }
-    .cacc9c1 { color: var(--muted); line-height: 1.85; overflow-wrap: anywhere; }
-    .cacc9c1 p { margin-bottom: 1.2rem; }
-    .cacc9c1 strong, .cacc9c1 h3, .cacc9c1 h4 { color: var(--text); }
-    .cacc9c1 ul, .cacc9c1 ol { padding-left: 1.3rem; }
-    .cacc9c1 li { padding-left: .3rem; margin-block: .55rem; }
-    .cacc9c1 li::marker { color: var(--accent); }
-    .cacc9c1 blockquote { margin: 1.5rem 0; padding: 1rem 1.4rem; border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); color: var(--text); }
-    .cacc9c1 img { height: auto; border-radius: var(--radius); }
-    .cacc9c1 pre { overflow-x: auto; padding: 1rem; border-radius: var(--radius); background: var(--surface); }
-    .cacc9c1 code, .cacc9c1 pre { font-family: var(--body); }
-    .c4ccf6f { margin-block: .8rem; border: 1px solid color-mix(in srgb,var(--text) 11%,transparent); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
-    .c3b6c0b { position: relative; padding: 1.3rem 3.5rem 1.3rem 1.4rem; list-style: none; cursor: pointer; color: var(--text); font: 550 1.04rem/1.5 var(--display); }
-    .c3b6c0b::-webkit-details-marker { display: none; }
-    .c3b6c0b::after { content: "+"; position: absolute; right: 1.4rem; top: 1.2rem; color: var(--accent); font-size: 1.3rem; }
-    details[open] > .c3b6c0b::after { content: "−"; }
-    .c4ccf6f[open] { border-color: color-mix(in srgb,var(--accent) 35%,var(--surface)); }
-    .c3b6c0b:focus-visible { outline-offset: -5px; }
-    .c5f00e7 { padding: 0 1.4rem 1.4rem; color: var(--muted); overflow-wrap: anywhere; }
-    .c5f00e7 > :last-child { margin-bottom: 0; }
-    .cb08258 { max-width: 820px; padding-block: 1.5rem 3.5rem; border-top: 1px solid color-mix(in srgb,var(--text) 12%,transparent); }
-    .cb08258 .c401b21 { font-size: 1.25rem; }
-    .c5d15b0 { margin: 0; padding-left: 1.25rem; color: var(--muted); font-size: .88rem; }
-    .c2a4177 { padding-block: .4rem; padding-left: .25rem; overflow-wrap: anywhere; }
-    .c2a4177 a, a.c2a4177 { color: var(--text); text-decoration-color: color-mix(in srgb,var(--accent) 45%,transparent); }
-    .c2a4177 a:hover, a.c2a4177:hover { color: var(--accent); }
-    .ccf5b61 { border-top: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
-    .cb34b0d { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; min-height: 96px; padding-block: 1.5rem; color: var(--muted); font-size: .8rem; }
-    .cb34b0d p { margin: 0; }
-    .cb34b0d a { color: var(--muted); }
-    @media (max-width: 850px) { .c5347f2 { grid-template-columns: minmax(0,1fr); gap: 2.5rem; padding-block: 2.5rem 3.5rem; } .cd2899d { max-width: 650px; } .cbb3db5 { width: 100%; max-width: 600px; justify-self: center; } h1 { font-size: clamp(2.5rem,7vw,4rem); } .c9ae096 { max-width: 60ch; } }
-    @media (max-width: 540px) { .c92e7cd { width: calc(100% - 2rem); } .ca4bfe8 { min-height: 76px; gap: .7rem; } .c9bafce { font-size: .95rem; gap: .45rem; } .c4650c0 { width: 2rem; height: 2rem; } .c798d5b { gap: .6rem; } .c798d5b > a:not(.c5548a2) { display: none; } .ca4bfe8 .c5548a2 { padding-inline: .85rem; font-size: .8rem; } .c5194a4 { padding: 1.25rem; } .cd17e9b th, .cd17e9b td { padding: .8rem .55rem; } .cd2899d > .c5548a2 { width: 100%; } .cab3d0c { padding-top: 2.8rem; } .cb34b0d { align-items: flex-start; flex-direction: column; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .c5548a2, .amount-field { transition: none; } .c5548a2:hover { transform: none; } }
-  </style>
+:root{--bg:#09100E;--surface:#12201B;--text:#E7F3EC;--muted:#83968C;--accent:#2DD4A7;--accent-ink:#04201A;--radius:16px;--display:"Manrope";--body:"Manrope";--line:color-mix(in srgb,var(--text) 13%,var(--bg));--line-strong:color-mix(in srgb,var(--text) 23%,var(--surface));--soft:color-mix(in srgb,var(--surface) 72%,var(--bg));--wash:color-mix(in srgb,var(--accent) 6%,var(--surface));--accent-line:color-mix(in srgb,var(--accent) 27%,var(--surface));--link:color-mix(in srgb,var(--accent) 65%,var(--text));--copy:color-mix(in srgb,var(--text) 87%,var(--muted));--secondary:color-mix(in srgb,var(--text) 28%,var(--muted));--shadow:0 12px 32px -20px color-mix(in srgb,var(--text) 23%,transparent);--shell:1184px;--rail:232px;--gap:clamp(36px,5vw,72px);}
+*,*::before,*::after{box-sizing:border-box;}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-block-start:28px;-webkit-text-size-adjust:100%;}
+body{margin:0;color:var(--text);background:var(--bg);font-family:var(--body),system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere;}
+::selection{background:var(--accent);color:var(--accent-ink);}
+[hidden]{display:none !important;}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:.22em;transition:color .18s ease,background-color .18s ease,border-color .18s ease;}
+a:hover{color:var(--text);}
+:where(a,button,summary,[tabindex]):focus-visible{outline:3px solid var(--accent);outline-offset:5px;}
+:where(h2,main,section,div)[tabindex="-1"]:focus{outline:none;}
+:where(h2,main,section,div)[tabindex="-1"]:focus-visible{outline:2px solid var(--accent-line);outline-offset:8px;}
+button,summary,a{-webkit-tap-highlight-color:color-mix(in srgb,var(--accent) 16%,transparent);}
+button{font:inherit;}
+svg,img,video{max-width:100%;vertical-align:middle;}
+img,video{height:auto;}
+:where(h1,h2,h3,h4){margin-block-start:0;color:var(--text);font-family:var(--display),system-ui,sans-serif;font-weight:600;text-wrap:balance;}
+:where(p,ul,ol,dl,blockquote,figure){margin-block-start:0;}
+.c92e7cd{width:min(calc(100% - 64px),var(--shell));margin-inline:auto;}
+.cfc6f28{width:20px;height:20px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+.c5a2b20{position:fixed;z-index:20;top:12px;left:16px;padding:10px 18px;border-radius:var(--radius);background:var(--text);color:var(--bg);font-weight:600;transform:translateY(-180%);}
+.c5a2b20:focus{color:var(--bg);transform:translateY(0);}
+.c2feeb1{position:fixed;z-index:15;inset:0 0 auto;height:3px;pointer-events:none;background:color-mix(in srgb,var(--accent) 12%,transparent);}
+.c2feeb1 span{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left center;}
+.c3e3f5e{border-block-end:1px solid var(--line);background:var(--surface);}
+.c2dd875{display:flex;min-height:76px;align-items:center;justify-content:space-between;gap:20px;padding-block:12px;}
+.c9bafce{display:inline-flex;align-items:center;gap:11px;color:var(--text);font-family:var(--display),system-ui,sans-serif;font-size:20px;font-weight:700;letter-spacing:-.045em;line-height:1;flex-shrink:0;}
+.c4650c0{display:grid;width:33px;height:33px;place-items:center;border:1px solid var(--accent-line);border-radius:calc(var(--radius) * .4);color:var(--link);background:var(--wash);}
+.c4650c0 svg{width:24px;height:24px;fill:currentColor;}
+.c6ce76a{display:flex;align-items:center;gap:26px;min-width:0;}
+.c79095b{color:var(--secondary);font-size:13px;font-weight:500;text-decoration:none;}
+.c5548a2{display:inline-flex;min-height:48px;min-width:112px;align-items:center;justify-content:center;gap:20px;padding:12px 22px;border:1px solid var(--accent);border-radius:calc(var(--radius) * .6);background:var(--accent);color:var(--accent-ink);font-size:14px;font-weight:700;line-height:1.35;text-align:center;text-decoration:none;box-shadow:0 2px 0 color-mix(in srgb,var(--text) 7%,transparent);transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease;}
+.c5548a2:hover{color:var(--accent-ink);background:color-mix(in srgb,var(--accent) 92%,var(--text));border-color:color-mix(in srgb,var(--accent) 92%,var(--text));box-shadow:0 4px 14px color-mix(in srgb,var(--accent) 19%,transparent);}
+.c5548a2:active{box-shadow:none;}
+.c62d17a{font-size:20px;font-weight:400;line-height:1;flex-shrink:0;}
+.cc90bb7{min-height:42px;padding:10px 19px;font-size:13px;}
+.c5347f2{padding-block:24px 38px;border-block-end:1px solid var(--line);}
+.c3db8b8{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin-block-end:27px;color:var(--muted);font-size:12px;line-height:1.65;}
+.c3db8b8 a{color:var(--secondary);text-decoration:none;}
+.c3db8b8 a:hover{color:var(--link);text-decoration:underline;}
+.c3db8b8 span{min-width:0;overflow-wrap:anywhere;}
+.c3db8b8 span:last-child{color:var(--secondary);}
+.cd55064{display:grid;justify-items:start;align-items:start;}
+.c5a5bbd{display:inline-flex;align-items:center;gap:7px;margin:0 0 17px;padding:5px 10px;border:1px solid var(--accent-line);border-radius:100px;color:var(--link);background:var(--wash);font-size:12px;font-weight:600;line-height:1.35;}
+.c5a5bbd .cfc6f28{width:14px;height:14px;}
+h1{max-width:25ch;margin:0;font-size:clamp(34px,4.8vw,62px);font-weight:600;line-height:1.09;letter-spacing:-.052em;}
+h1 em{color:var(--link);font-style:normal;}
+.c9ae096{max-width:70ch;margin:18px 0 0;color:var(--secondary);font-size:clamp(16px,1.5vw,18px);line-height:1.7;text-wrap:pretty;}
+.c5ca333{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-block-start:24px;}
+.c537bf6{display:inline-flex;min-height:44px;align-items:center;gap:8px;color:var(--secondary);font-size:13px;font-weight:500;text-decoration:none;}
+.c537bf6:hover{color:var(--link);}
+.c537bf6 .cfc6f28{width:16px;height:16px;}
+.c4a7ff7{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);max-width:calc(var(--rail) + var(--gap) + 72ch);align-items:start;column-gap:var(--gap);padding-block:40px 64px;font-size:17px;}
+.c972245{position:sticky;top:26px;grid-column:1;grid-row:1;min-width:0;}
+.c334b78{margin-block-end:26px;}
+.cbf4af6{display:flex;min-height:44px;align-items:center;justify-content:space-between;gap:12px;padding-block:0 12px;list-style:none;color:var(--text);font-size:13px;font-weight:700;cursor:pointer;}
+.cbf4af6::-webkit-details-marker,.c3b6c0b::-webkit-details-marker{display:none;}
+.cbf4af6::marker,.c3b6c0b::marker{content:"";}
+.cb7a95c{display:inline-flex;align-items:center;gap:9px;}
+.cb7a95c .cfc6f28{width:17px;height:17px;color:var(--muted);}
+.cb9f7ce{width:14px;height:14px;color:var(--muted);transition:transform .18s ease;}
+.c334b78[open] .cb9f7ce{transform:rotate(180deg);}
+.c89b940{max-height:min(44vh,420px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line-strong) var(--bg);padding:4px 5px 5px 0;}
+.cfb8e0c{display:grid;gap:3px;margin:0;padding:0;list-style:none;}
+.toc-link{position:relative;display:grid;grid-template-columns:19px minmax(0,1fr);gap:10px;padding:10px 10px 10px 12px;border-inline-start:2px solid var(--line);border-radius:0 calc(var(--radius) * .3) calc(var(--radius) * .3) 0;color:var(--secondary);font-size:12px;line-height:1.55;text-decoration:none;}
+.toc-index{padding-block-start:1px;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;}
+.toc-link:hover{background:var(--soft);color:var(--text);}
+.toc-link[aria-current="location"]{border-inline-start-color:var(--accent);background:var(--wash);color:var(--text);font-weight:600;}
+.toc-link[aria-current="location"] .toc-index{color:var(--link);}
+.c603765{position:relative;padding:22px 19px 19px;border:1px solid var(--accent-line);border-radius:var(--radius);background:linear-gradient(145deg,var(--wash),var(--surface));box-shadow:var(--shadow);}
+.ccc1d4e{display:grid;width:34px;height:34px;margin-block-end:17px;place-items:center;border:1px solid var(--accent-line);border-radius:calc(var(--radius) * .45);color:var(--link);background:var(--surface);}
+.c143587{margin:0 0 9px;font-family:var(--display),system-ui,sans-serif;font-size:21px;font-weight:600;letter-spacing:-.035em;line-height:1.25;text-wrap:balance;}
+.c2dcaa4{margin:0 0 20px;color:var(--secondary);font-size:12px;line-height:1.75;}
+.c603765 .c5548a2{width:100%;justify-content:space-between;padding-inline:16px;}
+.cab3d0c{grid-column:2;grid-row:1;width:100%;max-width:72ch;min-width:0;justify-self:start;font-size:17px;line-height:1.85;}
+.c4bdd3e{margin-block-end:46px;border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);}
+.cc02293{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 25px;border-block-end:1px solid var(--line);border-radius:var(--radius) var(--radius) 0 0;background:var(--wash);}
+.cc02293 h2{margin:0;font-size:19px;letter-spacing:-.025em;line-height:1.4;}
+.cc02293 .cfc6f28{color:var(--link);}
+.cda5bbf{display:flex;align-items:center;gap:10px;}
+.c9eda10{color:var(--secondary);font-size:11px;line-height:1.5;}
+.cd17e9b{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:14px;line-height:1.65;}
+.cd17e9b th,.cd17e9b td{padding:15px 25px;text-align:start;vertical-align:top;overflow-wrap:anywhere;}
+.cd17e9b th{width:36%;padding-inline-end:16px;color:var(--secondary);font-size:12px;font-weight:500;}
+.cd17e9b td{padding-inline-start:8px;color:var(--text);font-weight:500;}
+.cd17e9b tr + tr > *{border-block-start:1px solid var(--line);}
+.cd17e9b tr:nth-child(even) > *{background:color-mix(in srgb,var(--bg) 44%,var(--surface));}
+.cd17e9b tr:last-child th{border-end-start-radius:var(--radius);}
+.cd17e9b tr:last-child td{border-end-end-radius:var(--radius);}
+.cd17e9b p{margin:0;}
+.cd17e9b a{font-weight:600;}
+#steps,.c91b39e,.c12613e{scroll-margin-block-start:28px;}
+.c91b39e{padding-block-end:39px;}
+.c91b39e + .c91b39e{padding-block-start:34px;border-block-start:1px solid var(--line);}
+.c12613e{position:relative;margin:0 0 23px;padding-inline-start:18px;font-size:clamp(24px,2.5vw,30px);font-weight:600;letter-spacing:-.035em;line-height:1.3;}
+.c12613e::before{position:absolute;inset-block:.22em .2em;inset-inline-start:0;width:3px;border-radius:3px;background:var(--accent);content:"";}
+.cacc9c1,.c5f00e7{color:var(--copy);}
+:is(.cacc9c1,.c5f00e7) >:first-child{margin-block-start:0;}
+:is(.cacc9c1,.c5f00e7) >:last-child{margin-block-end:0;}
+:is(.cacc9c1,.c5f00e7) p{margin-block:0 20px;text-wrap:pretty;}
+.cacc9c1 h3{margin:31px 0 12px;font-size:21px;line-height:1.4;letter-spacing:-.025em;}
+.cacc9c1 h4{margin:26px 0 10px;font-size:17px;line-height:1.5;}
+:is(.cacc9c1,.c5f00e7) strong{color:var(--text);font-weight:700;}
+:is(.cacc9c1,.c5f00e7) em{color:var(--text);}
+:is(.cacc9c1,.c5f00e7) a{text-decoration-color:var(--accent-line);text-decoration-thickness:1px;}
+:is(.cacc9c1,.c5f00e7) a:hover{text-decoration-color:currentColor;}
+.cacc9c1 mark{padding:.08em .23em;border-radius:3px;color:var(--text);background:color-mix(in srgb,var(--accent) 18%,var(--surface));}
+.cacc9c1 hr{height:1px;margin-block:30px;border:0;background:var(--line);}
+:is(.cacc9c1,.c5f00e7) ul{margin:20px 0 26px;padding-inline-start:23px;list-style:disc;}
+:is(.cacc9c1,.c5f00e7) li{padding-inline-start:5px;margin-block:10px;}
+:is(.cacc9c1,.c5f00e7) ul > li::marker{color:var(--link);font-size:.85em;}
+:is(.cacc9c1,.c5f00e7) li > p{margin-block:0 10px;}
+:is(.cacc9c1,.c5f00e7) li >:last-child{margin-block-end:0;}
+.cacc9c1 li >:where(ul,ol),.c5f00e7 li >:where(ul,ol){margin-block:12px;}
+.cacc9c1 ul ul{list-style:circle;}
+.cacc9c1 ol,.cacc9c1 ul.steps,.cacc9c1 .steps > ul{margin:26px 0;padding:0;list-style:none;}
+.cacc9c1 ol > li,.cacc9c1 ul.steps > li,.cacc9c1 .steps > ul > li{position:relative;min-height:76px;margin:12px 0;padding:21px 22px 21px 70px;border:1px solid var(--line);border-radius:calc(var(--radius) * .75);background:var(--surface);font-size:15px;line-height:1.8;}
+.cacc9c1 ol > li{display:list-item;counter-increment:list-item;}
+.cacc9c1 ol > li::before,.cacc9c1 ul.steps > li::before,.cacc9c1 .steps > ul > li::before{position:absolute;inset-block-start:21px;inset-inline-start:20px;display:grid;width:30px;height:30px;place-items:center;border:1px solid var(--accent-line);border-radius:calc(var(--radius) * .4);color:var(--link);background:var(--wash);content:counter(list-item,decimal-leading-zero);font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;}
+.cacc9c1 ul.steps,.cacc9c1 .steps > ul{counter-reset:guide-step;}
+.cacc9c1 ul.steps > li,.cacc9c1 .steps > ul > li{counter-increment:guide-step;}
+.cacc9c1 ul.steps > li::before,.cacc9c1 .steps > ul > li::before{content:counter(guide-step,decimal-leading-zero);}
+.cacc9c1 :where(ol,ul.steps,.steps > ul) > li > strong:first-child{display:block;margin-block-end:4px;font-size:16px;line-height:1.55;}
+.cacc9c1 ol ol > li{min-height:0;padding:8px 0 8px 44px;border:0;background:transparent;}
+.cacc9c1 ol ol > li::before{inset-block-start:8px;inset-inline-start:0;}
+:is(.cacc9c1,.c5f00e7) table{width:100%;max-width:100%;margin:28px 0;border:1px solid var(--line-strong);border-radius:calc(var(--radius) * .75);border-collapse:separate;border-spacing:0;table-layout:fixed;background:var(--surface);font-size:13px;line-height:1.7;font-variant-numeric:tabular-nums;}
+:is(.cacc9c1,.c5f00e7) caption{padding-block-end:12px;color:var(--secondary);font-size:12px;font-weight:500;text-align:start;caption-side:top;}
+.cacc9c1 :where(th,td),.c5f00e7 :where(th,td){padding:15px 16px;vertical-align:top;text-align:start;overflow-wrap:anywhere;hyphens:auto;}
+:is(.cacc9c1,.c5f00e7) th{color:var(--text);font-weight:600;}
+:is(.cacc9c1,.c5f00e7) thead th{border-block-end:1px solid var(--accent-line);background:var(--wash);color:var(--link);font-size:12px;line-height:1.5;}
+:is(.cacc9c1,.c5f00e7) thead tr:first-child th:first-child{border-start-start-radius:calc(var(--radius) * .75);}
+:is(.cacc9c1,.c5f00e7) thead tr:first-child th:last-child{border-start-end-radius:calc(var(--radius) * .75);}
+:is(.cacc9c1,.c5f00e7) tbody tr:nth-child(even){background:color-mix(in srgb,var(--bg) 55%,var(--surface));}
+:is(.cacc9c1,.c5f00e7) tbody tr + tr > *{border-block-start:1px solid var(--line);}
+:is(.cacc9c1,.c5f00e7) tbody th{font-size:12px;}
+.cacc9c1 table :where(p,ul,ol),.c5f00e7 table :where(p,ul,ol){margin-block:0 8px;}
+.cacc9c1 table :where(p,ul,ol):last-child,.c5f00e7 table :where(p,ul,ol):last-child{margin-block-end:0;}
+.cacc9c1 blockquote{position:relative;margin:29px 0;padding:22px 26px;border-inline-start:3px solid var(--accent);border-radius:0 calc(var(--radius) * .65) calc(var(--radius) * .65) 0;color:var(--text);background:var(--wash);font-size:17px;line-height:1.85;}
+.cacc9c1 blockquote p{margin-block-end:12px;}
+.cacc9c1 blockquote >:last-child{margin-block-end:0;}
+.cacc9c1 blockquote cite{display:block;margin-block-start:12px;color:var(--secondary);font-size:12px;font-style:normal;}
+.cacc9c1 .takeaway{margin:28px 0;padding:23px 26px;border:1px solid var(--accent-line);border-block-start:3px solid var(--accent);border-radius:calc(var(--radius) * .75);background:var(--wash);color:var(--text);font-size:15px;line-height:1.8;}
+.cacc9c1 .takeaway >:first-child{margin-block-start:0;}
+.cacc9c1 .takeaway >:last-child{margin-block-end:0;}
+.cacc9c1 .takeaway > strong:first-child,.cacc9c1 .takeaway > h3:first-child{display:block;margin-block-end:9px;color:var(--link);font-size:15px;font-weight:700;letter-spacing:0;}
+.cacc9c1 figure{margin:28px 0;}
+.cacc9c1 figcaption{margin-block-start:10px;color:var(--secondary);font-size:12px;}
+.cacc9c1 :where(code,kbd,samp),.c5f00e7 code{padding:.1em .3em;border-radius:4px;background:var(--soft);color:var(--text);font-size:.85em;}
+.cacc9c1 pre{max-width:100%;padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--soft);white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;}
+.cacc9c1 dt{color:var(--text);font-weight:700;}
+.cacc9c1 dd{margin:6px 0 20px;}
+.cddacd4{padding-block:34px 39px;border-block-start:1px solid var(--line);}
+.cf3c3c6{margin:-7px 0 23px;color:var(--secondary);font-size:14px;line-height:1.8;}
+.c46faa3{border-block-start:1px solid var(--line-strong);}
+.c4ccf6f{border-block-end:1px solid var(--line-strong);}
+.c3b6c0b{position:relative;display:flex;min-height:76px;align-items:center;justify-content:space-between;gap:22px;padding:23px 9px 23px 0;color:var(--text);list-style:none;cursor:pointer;font-size:16px;font-weight:600;line-height:1.6;transition:color .18s ease;}
+.c3b6c0b::after{display:grid;width:28px;height:28px;flex-shrink:0;place-items:center;border:1px solid var(--line-strong);border-radius:50%;background:var(--surface);color:var(--secondary);content:"+";font-family:var(--body),system-ui,sans-serif;font-size:20px;font-weight:400;line-height:1;}
+.c3b6c0b:hover{color:var(--link);}
+.c3b6c0b:hover::after{border-color:var(--accent-line);background:var(--wash);color:var(--link);}
+.c4ccf6f[open] .c3b6c0b{color:var(--link);}
+.c4ccf6f[open] .c3b6c0b::after{border-color:var(--accent-line);background:var(--wash);color:var(--link);content:"−";}
+.c5f00e7{padding:0 48px 25px 0;font-size:15px;line-height:1.85;}
+.c5f00e7 ol{padding-inline-start:24px;}
+.c4a2e23{padding-block:30px 0;border-block-start:1px solid var(--line);}
+.c4a2e23 .c12613e{margin-block-end:16px;font-size:23px;}
+.c5d15b0{margin:0;padding:0;list-style:none;counter-reset:source;}
+.c5d15b0 li{position:relative;padding:13px 0 13px 30px;counter-increment:source;}
+.c5d15b0 li + li{border-block-start:1px solid var(--line);}
+.c5d15b0 li::before{position:absolute;inset-block-start:16px;inset-inline-start:0;color:var(--muted);content:counter(source,decimal-leading-zero);font-size:10px;font-variant-numeric:tabular-nums;line-height:1.8;}
+.c2a4177{display:inline;color:var(--secondary);font-size:13px;line-height:1.8;text-decoration:none;overflow-wrap:anywhere;}
+.c2a4177::after{margin-inline-start:7px;color:var(--link);content:"↗";}
+.c2a4177:hover{color:var(--link);text-decoration:underline;}
+.c4bdd3e:not(:has(.cd17e9b)),.cddacd4:not(:has(.c4ccf6f)),.c4a2e23:not(:has(.c2a4177)){display:none;}
+.cdf21db{padding-block:26px max(30px,env(safe-area-inset-bottom));border-block-start:1px solid var(--line);background:var(--soft);}
+.cb34b0d{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;}
+.cf87639{display:flex;align-items:center;flex-wrap:wrap;gap:10px 22px;}
+.c3923d6{color:var(--text);font-family:var(--display),system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:-.025em;}
+.c469d1c{margin:0;color:var(--secondary);font-size:12px;}
+.c336379{display:inline-flex;min-height:44px;align-items:center;gap:10px;color:var(--secondary);font-size:12px;font-weight:500;text-decoration:none;}
+.c336379 .cfc6f28{width:15px;height:15px;}
+.c9e695a{position:fixed;z-index:10;inset:auto 0 0;padding:11px 0 max(11px,env(safe-area-inset-bottom));border-block-start:1px solid var(--line-strong);background:color-mix(in srgb,var(--surface) 96%,transparent);box-shadow:0 -10px 36px -22px color-mix(in srgb,var(--text) 22%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);}
+.c9674d5{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.c0acc4d{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px 16px;font-size:14px;}
+.c0acc4d strong{color:var(--text);font-weight:600;}
+.c7eddde{color:var(--secondary);font-size:12px;}
+.c9e3bb3{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.c9e3bb3 .c5548a2{min-height:44px;min-width:142px;padding-block:10px;}
+.cd6d1c3{display:grid;width:36px;height:36px;padding:0;place-items:center;border:1px solid transparent;border-radius:calc(var(--radius) * .5);color:var(--secondary);background:transparent;cursor:pointer;}
+.cd6d1c3:hover{border-color:var(--line);background:var(--soft);color:var(--text);}
+body.has-sticky-cta{scroll-padding-block-end:90px;}
+body.has-sticky-cta :where(a,summary,button,[tabindex]){scroll-margin-block-end:96px;}
+@media (min-width:901px) and (max-height:740px){.c972245{top:18px;}
+.c89b940{max-height:29vh;}
+.c334b78{margin-block-end:18px;}
+.c603765{padding-block:17px;}
+.ccc1d4e{display:none;}
+}
+@media (max-width:1100px){:root{--rail:210px;--gap:38px;}
+.c92e7cd{width:calc(100% - 48px);}
+.cab3d0c{font-size:16px;}
+.c603765{padding-inline:17px;}
+}
+@media (max-width:900px){.c92e7cd{width:min(calc(100% - 32px),760px);}
+.c2dd875{min-height:68px;}
+.c5347f2{padding-block:22px 32px;}
+h1{max-width:23ch;font-size:clamp(34px,6vw,52px);}
+.c4a7ff7{grid-template-columns:minmax(0,1fr);max-width:760px;row-gap:24px;padding-block:24px 40px;}
+.c972245{display:contents;}
+.c334b78{grid-column:1;grid-row:1;margin:0;border:1px solid var(--line-strong);border-radius:calc(var(--radius) * .7);background:var(--surface);}
+.cbf4af6{min-height:54px;padding:15px 18px;}
+.c334b78[open] .cbf4af6{border-block-end:1px solid var(--line);}
+.c89b940{max-height:48vh;margin:9px 12px 12px;padding:4px;}
+.toc-link{padding-block:11px;font-size:13px;}
+.cab3d0c{grid-column:1;grid-row:2;max-width:72ch;justify-self:center;font-size:17px;}
+.c603765{display:grid;grid-column:1;grid-row:3;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 30px;margin-block-start:8px;padding:26px;}
+.ccc1d4e{display:none;}
+.c143587{margin:0;font-size:23px;}
+.c2dcaa4{grid-column:1;margin:0;font-size:13px;}
+.c603765 .c5548a2{grid-column:2;grid-row:1 / span 2;min-width:144px;}
+.c4bdd3e{margin-block-end:35px;}
+.c7eddde{display:none;}
+}
+@media (max-width:540px){.c6ce76a{gap:12px;}
+.c79095b{display:none;}
+.c9bafce{gap:8px;font-size:18px;}
+.c4650c0{width:29px;height:29px;}
+.cc90bb7{min-width:88px;padding-inline:15px;}
+.c3db8b8{gap:4px 7px;margin-block-end:22px;font-size:11px;}
+.c5a5bbd{margin-block-end:15px;}
+h1{font-size:clamp(32px,8.4vw,43px);letter-spacing:-.045em;line-height:1.13;}
+.c9ae096{margin-block-start:16px;font-size:16px;}
+.c5ca333{gap:10px 23px;margin-block-start:21px;}
+.cab3d0c{font-size:16px;line-height:1.85;}
+.cc02293{padding:17px;}
+.cc02293 h2{font-size:18px;}
+.c9eda10{display:none;}
+.cd17e9b th,.cd17e9b td{padding:13px 17px;font-size:12px;}
+.cd17e9b th{width:38%;padding-inline-end:8px;font-size:11px;}
+.cd17e9b td{padding-inline-start:6px;font-size:13px;}
+.c12613e{margin-block-end:20px;padding-inline-start:15px;font-size:24px;letter-spacing:-.03em;}
+.c91b39e{padding-block-end:30px;}
+.c91b39e + .c91b39e{padding-block-start:29px;}
+.cacc9c1 h3{font-size:19px;}
+:is(.cacc9c1,.c5f00e7) table{font-size:12px;}
+.cacc9c1 :where(th,td),.c5f00e7 :where(th,td){padding:12px 9px;}
+:is(.cacc9c1,.c5f00e7) thead th{font-size:11px;}
+.cacc9c1 ol > li,.cacc9c1 ul.steps > li,.cacc9c1 .steps > ul > li{padding:18px 16px 18px 60px;font-size:14px;}
+.cacc9c1 ol > li::before,.cacc9c1 ul.steps > li::before,.cacc9c1 .steps > ul > li::before{inset-block-start:19px;inset-inline-start:15px;width:28px;height:28px;}
+.cacc9c1 blockquote,.cacc9c1 .takeaway{padding:19px 20px;font-size:15px;}
+.c3b6c0b{min-height:70px;gap:16px;padding-block:20px;font-size:15px;}
+.c5f00e7{padding-inline-end:12px;font-size:14px;}
+.c603765{grid-template-columns:minmax(0,1fr);gap:12px;padding:24px;}
+.c603765 .c5548a2{grid-column:1;grid-row:auto;margin-block-start:4px;}
+.c9674d5{gap:10px;}
+.c0acc4d{font-size:13px;}
+.c9e3bb3{gap:6px;}
+.c9e3bb3 .c5548a2{min-width:102px;gap:13px;padding-inline:15px;font-size:13px;}
+.cd6d1c3{width:32px;}
+.cf87639{align-items:start;flex-direction:column;gap:4px;}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}
+*,*::before,*::after{transition:none !important;animation:none !important;}
+}
+@media (forced-colors:active){.c5548a2,.c5a5bbd,.c4650c0,.c603765,.c3b6c0b::after{border:1px solid currentColor;}
+.toc-link[aria-current="location"]{outline:1px solid currentColor;outline-offset:-1px;}
+.c12613e::before{border-inline-start:3px solid currentColor;}
+}
+@media print{
+.c92e7cd{width:100%}
+.c3e3f5e,.c972245,.c5ca333,.c9e695a,.c2feeb1,.c5a2b20,.c336379{display:none!important}
+.c5347f2{padding-block:0 24px}
+h1{max-width:none;font-size:32pt}
+.c4a7ff7{display:block;max-width:none;padding-block:24px}
+.cab3d0c{max-width:none;font-size:11pt}
+.c12613e,.cacc9c1 h3{break-after:avoid}
+.c4bdd3e,.cacc9c1 blockquote,.cacc9c1 .takeaway,.c4ccf6f{break-inside:avoid;box-shadow:none}
+.c3b6c0b::after{display:none}
+.c4ccf6f::details-content{content-visibility:visible}
+.c4ccf6f>.c5f00e7{display:block}
+}
+</style>
 </head>
-<body>
-  <a class="c5a2b20" href="#content">Skip to content</a>
-  <header class="c0ca913">
-    <nav class="ca4bfe8 c92e7cd" aria-label="Primary navigation">
-      <a class="c9bafce" href="#top" aria-label="Swap station, top of page">
-        <span class="c4650c0" aria-hidden="true"><svg class="cfc6f28" viewBox="0 0 24 24"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg></span>
-        Swap station
-      </a>
-      <div class="c798d5b">
-        <a href="#facts">Key facts</a>
-        <a href="#sources">Sources</a>
-        <a class="c5548a2" href="/dashboard/">Swap</a>
+<body id="top">
+  <a class="c5a2b20" href="#article">Skip to the guide</a>
+  <div class="c2feeb1" aria-hidden="true" hidden><span></span></div>
+
+  <header class="c3e3f5e">
+    <div class="c92e7cd c2dd875">
+      <span class="c9bafce">
+        <span class="c4650c0" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 7h9v9H5zm13 0h9v9h-9zM5 20h22v5H5z"/></svg></span>
+        Website
+      </span>
+      <div class="c6ce76a">
+        <a class="c79095b" href="#article">Read the guide</a>
+        <a class="c5548a2 cc90bb7" href="/dashboard/">Swap</a>
       </div>
-    </nav>
+    </div>
   </header>
-  <div class="c92e7cd" id="top">
-    <div class="c6cbbee"><nav class="c3db8b8" aria-label="Breadcrumb"><a href="/dashboard/">Home</a> <span>/</span> <span>Swaps</span> <span>/</span> <span>Swap XMR to USDT</span></nav></div>
-    <section class="c5347f2" aria-labelledby="hero-title">
-      <div class="cd2899d">
-        <p class="c5a5bbd">All swap routes</p>
-        <h1 id="hero-title">Swap XMR to <em>USDT</em></h1>
+
+  <main id="main">
+    <section class="c5347f2 c92e7cd" aria-labelledby="guide-title">
+      <nav class="c3db8b8" aria-label="Breadcrumb"><a href="/dashboard/">Home</a> <span>/</span> <span>Swaps</span> <span>/</span> <span>Swap XMR to USDT</span></nav>
+      <div class="cd55064">
+        <p class="c5a5bbd"><svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6l2 2 2-2h6v15h-6l-2 2-2-2H4zM12 6v15"/></svg>The practical guide</p>
+        <h1 id="guide-title">Swap XMR to <em>USDT</em></h1>
         <p class="c9ae096">To swap XMR to USDT you send Monero to a one-time deposit address at an instant exchanger and receive Tether at a quoted rate, and the single decision that moves your result most is which USDT network you receive on — TRC-20 on Tron is cheap and fast, ERC-20 on Ethereum is widely accepted but costs far more in gas.</p>
-        <a class="c5548a2" href="/dashboard/">Swap <svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <div class="c5ca333">
+          <a class="c5548a2" href="/dashboard/">Swap <span class="c62d17a" aria-hidden="true">→</span></a>
+          <a class="c537bf6" href="#steps" data-jump-steps>Jump to steps <svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+        </div>
       </div>
-      <aside class="cbb3db5 cac602c" data-from="XMR" aria-labelledby="widget-title">
-        <div class="c49c771">
-          <h2 id="widget-title">Swap</h2>
-          <span class="c2629d1">Best route</span>
-        </div>
-        <div class="c40cb4f">
-          <div class="ca662ef"><span class="c9e5ea5">You pay</span></div>
-          <div class="ca659a1">
-            <input id="pay-amount" class="c66678e" type="number" inputmode="decimal" min="0" max="1000000000" step="any" value="1" aria-label="Amount you pay">
-            <span class="c15418a">
-              <img class="cca703f" id="pay-ico" width="22" height="22" alt="" src="assets/tokens/eth.svg">
-              <select id="pay-token" class="c68ca57" aria-label="Token you pay"></select>
-            </span>
-          </div>
-          <div class="c9e020a" id="pay-usd">—</div>
-        </div>
-        <button type="button" class="c359c7d" id="swap-switch" aria-label="Switch the two tokens">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v13m0 0-3-3m3 3 3-3M17 20V7m0 0-3 3m3-3 3 3"/></svg>
-        </button>
-        <div class="c40cb4f">
-          <div class="ca662ef"><span class="c9e5ea5">You receive</span></div>
-          <div class="ca659a1">
-            <output id="get-amount" class="c66678e" for="pay-amount">—</output>
-            <span class="c15418a">
-              <img class="cca703f" id="get-ico" width="22" height="22" alt="" src="assets/tokens/usdt.svg">
-              <select id="get-token" class="c68ca57" aria-label="Token you receive"></select>
-            </span>
-          </div>
-          <div class="c9e020a" id="get-usd">—</div>
-        </div>
-        <dl class="c1e7eb1">
-          <div><dt>Rate</dt><dd id="swap-rate">—</dd></div>
-          <div><dt>Network fee</dt><dd id="swap-fee">0.3%</dd></div>
-        </dl>
-        <noscript><p class="ce703d6">Enable JavaScript to estimate the swap.</p></noscript>
-        <a class="c5548a2" href="/dashboard/">Swap <svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-      </aside>
     </section>
-    <section class="c5194a4" id="facts" aria-labelledby="facts-title">
-      <h2 class="c401b21" id="facts-title">Key facts</h2>
-      <div class="cd99c8f"><table class="cd17e9b"><tbody><tr><th scope="row">Pair</th><td>XMR to USDT, or the reverse</td></tr>
+
+    <div class="c92e7cd c4a7ff7">
+      <aside class="c972245" aria-label="Guide navigation and next step">
+        <details class="c334b78" hidden>
+          <summary class="cbf4af6">
+            <span class="cb7a95c"><svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>On this page</span>
+            <svg class="cfc6f28 cb9f7ce" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <nav class="c89b940" aria-label="Table of contents"><ol class="cfb8e0c"></ol></nav>
+        </details>
+        <section class="c603765" aria-labelledby="next-step-title">
+          <span class="ccc1d4e" aria-hidden="true"><svg class="cfc6f28" viewBox="0 0 24 24"><path d="M5 17 17 5M6 5h11v11M5 5v14h14"/></svg></span>
+          <h2 class="c143587" id="next-step-title">Put the guide into practice.</h2>
+          <p class="c2dcaa4">Your next step starts in the dashboard.</p>
+          <a class="c5548a2" href="/dashboard/">Swap <span class="c62d17a" aria-hidden="true">→</span></a>
+        </section>
+      </aside>
+
+      <article class="cab3d0c" id="article" aria-labelledby="guide-title" tabindex="-1">
+        <section class="c4bdd3e" aria-labelledby="facts-title">
+          <div class="cc02293">
+            <div class="cda5bbf"><svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v3H8zM8 5H5v16h14V5h-3M8 12h8M8 16h5"/></svg><h2 id="facts-title">At a glance</h2></div>
+            <span class="c9eda10">The key facts</span>
+          </div>
+          <table class="cd17e9b"><tbody><tr><th scope="row">Pair</th><td>XMR to USDT, or the reverse</td></tr>
 <tr><th scope="row">USDT networks</th><td>TRC-20 (Tron), ERC-20 (Ethereum), plus BEP-20, Solana</td></tr>
 <tr><th scope="row">Typical time</th><td>10-30 minutes, mostly XMR confirmations</td></tr>
 <tr><th scope="row">KYC</th><td>None on instant exchangers; required on CEXs</td></tr>
 <tr><th scope="row">Fees</th><td>Exchanger float plus the chosen network's withdrawal fee</td></tr>
-<tr><th scope="row">Min amount</th><td>Set per exchanger, rises with ERC-20 gas</td></tr></tbody></table></div>
-    </section>
-  </div>
-  <main class="cab3d0c c92e7cd" id="content">
-    <section class="c91b39e"><h2 class="c12613e">Why Swap XMR to USDT at All</h2><div class="cacc9c1"><strong>You swap XMR to USDT to freeze a volatile position into a dollar-pegged stablecoin without touching a bank or passing identity checks.</strong> Monero's price can move several percent in a day, so holders who want to lock in a level, sit out a dip, or prepare funds for a later purchase convert into Tether rather than cashing out to fiat. USDT keeps the balance liquid and transferable across chains while removing the price swing, and because the swap runs through a non-custodial exchanger, no order book or verified account ever holds your coins. The trade is a de-risking move, not an exit from crypto entirely.<h3>De-Risking Without Fiat</h3>Converting to fiat means a bank, a KYC check, and often a multi-day settlement. Moving XMR into USDT instead keeps everything on-chain: the dollar value is locked the moment the swap completes, yet the balance stays as a crypto asset you can redeploy in seconds whenever you decide to buy back in.<h3>What USDT Actually Is</h3>USDT, or Tether, is a token that tracks the US dollar one-to-one and lives on several blockchains at once. The same dollar peg exists as separate tokens on Tron, Ethereum, BNB Chain, and Solana, which is exactly why the network you receive on is a real decision rather than a formality, as Tether itself documents on its transparency pages.</div></section>
+<tr><th scope="row">Min amount</th><td>Set per exchanger, rises with ERC-20 gas</td></tr></tbody></table>
+        </section>
+
+        <div id="steps" tabindex="-1">
+          <section class="c91b39e"><h2 class="c12613e">Why Swap XMR to USDT at All</h2><div class="cacc9c1"><strong>You swap XMR to USDT to freeze a volatile position into a dollar-pegged stablecoin without touching a bank or passing identity checks.</strong> Monero's price can move several percent in a day, so holders who want to lock in a level, sit out a dip, or prepare funds for a later purchase convert into Tether rather than cashing out to fiat. USDT keeps the balance liquid and transferable across chains while removing the price swing, and because the swap runs through a non-custodial exchanger, no order book or verified account ever holds your coins. The trade is a de-risking move, not an exit from crypto entirely.<h3>De-Risking Without Fiat</h3>Converting to fiat means a bank, a KYC check, and often a multi-day settlement. Moving XMR into USDT instead keeps everything on-chain: the dollar value is locked the moment the swap completes, yet the balance stays as a crypto asset you can redeploy in seconds whenever you decide to buy back in.<h3>What USDT Actually Is</h3>USDT, or Tether, is a token that tracks the US dollar one-to-one and lives on several blockchains at once. The same dollar peg exists as separate tokens on Tron, Ethereum, BNB Chain, and Solana, which is exactly why the network you receive on is a real decision rather than a formality, as Tether itself documents on its transparency pages.</div></section>
 <section class="c91b39e"><h2 class="c12613e">The USDT Network Choice Decides Your Fees</h2><div class="cacc9c1">Tether is not a single coin on a single chain. The same dollar peg is issued as a distinct token on each network it runs on, and the network you select when you swap XMR to USDT sets how much you pay to receive and later move that balance. Receiving USDT as ERC-20 on Ethereum can cost many dollars in gas during busy periods, while TRC-20 on Tron typically costs cents. The peg value is identical; the cost and speed of handling it are not. Pick the network before you request the quote, because the deposit address and the withdrawal fee both depend on it.<table><thead><tr><th>USDT Network</th><th>Typical Fee</th><th>Speed</th><th>Notes</th></tr></thead><tbody><tr><td>TRC-20 (Tron)</td><td>~1 USDT or less</td><td>Seconds to 1 min</td><td>Cheapest and fastest; widely accepted by exchangers</td></tr><tr><td>ERC-20 (Ethereum)</td><td>Several USDT in gas</td><td>1-5 min</td><td>Most universally supported; costly when Ethereum is busy</td></tr><tr><td>BEP-20 (BNB Chain)</td><td>Well under 1 USDT</td><td>Seconds</td><td>Cheap, but confirm your wallet and receiver support it</td></tr><tr><td>SPL (Solana)</td><td>Fractions of a cent</td><td>Seconds</td><td>Very cheap and quick; fewer services accept it</td></tr></tbody></table><h3>When ERC-20 Still Makes Sense</h3>Choose ERC-20 only when the place you are sending USDT next accepts nothing else — some older services, custodians, or DeFi positions are Ethereum-only. If you control where the funds go, there is rarely a reason to pay Ethereum gas to receive a stablecoin.<h3>Why TRC-20 Usually Wins</h3>For a plain store-of-value swap, TRC-20 moves USDT for a fraction of ERC-20's cost and confirms almost instantly, and nearly every instant exchanger and wallet supports it. Verify the receiving wallet lists a Tron address for USDT before you commit, since a Tron token cannot land in an Ethereum-only address.</div></section>
 <section class="c91b39e"><h2 class="c12613e">Route Options: Instant Exchanger vs CEX</h2><div class="cacc9c1">There are two realistic ways to swap XMR to USDT, and they differ most in whether you surrender identity and custody. An instant, non-custodial exchanger takes your Monero at a one-time address and returns USDT with no account; a centralized exchange (CEX) makes you register, verify identity, deposit XMR into its wallet, trade, then withdraw. The exchanger route is faster to start and private; the CEX route gives an order book and a paper trail at the cost of KYC and holding your funds in the meantime.<table><thead><tr><th>Route</th><th>KYC</th><th>Speed to Start</th><th>Custody</th></tr></thead><tbody><tr><td>Instant exchanger</td><td>None</td><td>Immediate, no sign-up</td><td>Non-custodial, one-time address</td></tr><tr><td>CEX account</td><td>Full identity check</td><td>Hours to days for approval</td><td>Exchange holds your balance</td></tr></tbody></table><h3>Instant Exchanger Flow</h3>The exchanger generates a single-use Monero deposit address the moment you quote, watches it for the required confirmations, and sends USDT to the address you supplied on the network you chose. Nothing sits in a shared balance and there is no login — a swap ID is the only reference you keep.<h3>CEX Flow and Its Cost</h3>A CEX lists XMR against USDT on an order book, so you can place limit orders and see depth, but Monero pairs are increasingly delisted on regulated venues, and every step from deposit to withdrawal is tied to a verified identity. You trade privacy and self-custody for order types and a dispute history.</div></section>
 <section class="c91b39e"><h2 class="c12613e">Timing the Swap to Protect the Peg Value</h2><div class="cacc9c1">The point of moving XMR into USDT is to lock a dollar figure, so timing matters more here than on a crypto-to-crypto swap where both legs float. The rate you lock is the Monero price at the moment the exchanger quotes or detects your deposit, which means a sharp XMR move while your transaction waits in the mempool changes how many dollars you end up with. A fixed-rate quote reserves the output for a short window and shields you from that movement; a floating-rate quote applies the live price when your deposit confirms. For a de-risking swap, the fixed-rate option usually fits the intent better, because you are trying to capture a specific level rather than chase the best average. Live XMR pricing is easy to check against an independent source such as CoinGecko before you send, so you know whether the quote reflects the market or lags it.<ul><li>Check the live XMR price against an independent tracker before quoting.</li><li>Prefer a fixed-rate quote when the goal is to lock a specific dollar level.</li><li>Send promptly after quoting, since fixed windows expire in minutes.</li><li>Expect most of the wait to be Monero's own confirmations, not the USDT payout.</li></ul></div></section>
 <section class="c91b39e"><h2 class="c12613e">Doing the XMR to USDT Swap Step by Step</h2><div class="cacc9c1">Once the network and route are chosen, the sequence is short and the same every time, which is what makes converting XMR to USDT repeatable rather than nerve-wracking.<ul><li>Choose the USDT network first — TRC-20 for low cost, ERC-20 only if the receiver demands it.</li><li>Enter the XMR amount and select a fixed-rate quote to lock the dollar value.</li><li>Paste your USDT receiving address for the exact network you picked, and double-check it matches.</li><li>Copy the one-time Monero deposit address and send the precise quoted amount from your wallet.</li><li>Save the swap ID, then wait for Monero confirmations; USDT is released automatically once they clear.</li></ul></div></section>
 <section class="c91b39e"><h2 class="c12613e">What You Actually Receive After Fees</h2><div class="cacc9c1">The USDT that lands is the quoted output minus two separate costs, and conflating them is how people are surprised by the final number. The first is the exchanger's float, the margin baked into the rate itself, which is the same regardless of network. The second is the network withdrawal fee for the USDT chain you selected, and this is where the ERC-20 versus TRC-20 gap shows up most sharply — the identical dollar amount of Monero can net you noticeably more USDT on Tron than on Ethereum purely because the payout fee is smaller. On small swaps the network fee dominates, which is why exchangers set higher minimums for ERC-20 payouts than for TRC-20: a ten-dollar swap paid out on Ethereum could lose most of its value to gas, so the exchanger refuses it rather than return dust.<h3>Reading the Breakdown Before Sending</h3>A good quote shows the output amount and the payout network together, so the fee is visible before you commit. Treat the network line as part of the price, not an afterthought: switching the same swap from ERC-20 to TRC-20 often changes the amount received more than shopping between exchangers would.<h3>Confirming the USDT Arrived</h3>Once the exchanger reports the payout, you can verify it independently on the chain you chose — a Tron explorer such as Tronscan for TRC-20, or Etherscan for ERC-20 — by searching your receiving address. The status page and the on-chain record should match before you consider the swap finished.</div></section>
 <section class="c91b39e"><h2 class="c12613e">Risks and Edge Cases When Swapping to USDT</h2><div class="cacc9c1">Most problems with an XMR to USDT swap come from the network choice and the receiving address rather than the Monero side, which is well-understood and simply slow to confirm. The commonest mistake is pasting a USDT address for the wrong chain — a Tron address where an Ethereum token is being sent, or the reverse — which can strand funds, since a token issued on one network cannot settle on another even if the address string looks superficially valid. Underpaying the deposit usually yields a smaller recalculated output rather than a cancellation, while overpaying is refunded to a return address you supply. The USDT peg itself is extremely stable but is not a government-backed guarantee, so holding Tether is holding an issuer's dollar claim rather than cash. For a short-term de-risking swap that distinction rarely bites, but it is worth knowing the balance you receive is a token tracking the dollar, not the dollar itself.<h3>Address and Network Must Agree</h3>Before sending any Monero, confirm the receiving wallet shows a USDT address on the exact network you selected in the quote. The deposit address the exchanger gives you is for Monero; the payout address you provide must be a USDT address on the matching chain, or the output has nowhere valid to land.<h3>Keep the Swap ID Until Confirmed</h3>The swap ID is the only handle on a no-account trade. Save it the instant it appears, because if a payout is delayed or a network issue slows confirmation, support will ask for that ID first, and the status page tied to it is how you reopen the transaction without any login.</div></section><section class="c91b39e cae6441" id="cluster"><h2 class="c12613e">More in this series</h2><div class="cacc9c1"><ul><li><a href="/">XMR Swap</a></li><li><a href="/swap-xmr-to-btc/">Swap XMR to BTC</a></li><li><a href="/swap-xmr-to-ltc/">Swap XMR to LTC</a></li><li><a href="/swap-xmr-to-theta/">How to Swap XMR to Theta</a></li></ul></div></section>
-    <details class="c4ccf6f"><summary class="c3b6c0b">How do I swap XMR to USDT without KYC?</summary><div class="c5f00e7"><strong>Use a non-custodial instant exchanger: send Monero to its one-time deposit address and receive USDT with no account or identity check.</strong> Choose the USDT network first, paste a matching receiving address, and the payout is sent once Monero confirms.</div></details>
+        </div>
+
+        <section class="cddacd4" aria-labelledby="faq-title">
+          <h2 class="c12613e" id="faq-title">Frequently asked questions</h2>
+          <p class="cf3c3c6">A closer look at the details.</p>
+          <div class="c46faa3"><details class="c4ccf6f"><summary class="c3b6c0b">How do I swap XMR to USDT without KYC?</summary><div class="c5f00e7"><strong>Use a non-custodial instant exchanger: send Monero to its one-time deposit address and receive USDT with no account or identity check.</strong> Choose the USDT network first, paste a matching receiving address, and the payout is sent once Monero confirms.</div></details>
 <details class="c4ccf6f"><summary class="c3b6c0b">Which USDT network should I choose when swapping from XMR?</summary><div class="c5f00e7">TRC-20 on Tron is cheapest and fastest and fits most purposes. Pick ERC-20 on Ethereum only when the place you are sending USDT accepts nothing else, since Ethereum gas can cost many times more.</div></details>
 <details class="c4ccf6f"><summary class="c3b6c0b">Why does the USDT network affect how much I receive?</summary><div class="c5f00e7">The dollar peg is identical on every chain, but each network charges its own withdrawal fee. A payout on Ethereum costs several dollars in gas while the same payout on Tron costs cents, so the net USDT received differs by network.</div></details>
 <details class="c4ccf6f"><summary class="c3b6c0b">How long does it take to swap XMR to USDT?</summary><div class="c5f00e7">Usually ten to thirty minutes. Most of that is Monero's own confirmation time on your deposit; once it clears, the USDT payout is sent automatically and lands within seconds to a few minutes depending on the network.</div></details>
 <details class="c4ccf6f"><summary class="c3b6c0b">Is swapping XMR to USDT a way to escape volatility?</summary><div class="c5f00e7">Yes. USDT tracks the US dollar, so converting Monero into it locks the current dollar value while keeping the balance as an on-chain, transferable asset you can redeploy later without a bank or fiat withdrawal.</div></details>
 <details class="c4ccf6f"><summary class="c3b6c0b">What if I send the wrong USDT network address?</summary><div class="c5f00e7">A USDT token issued on one chain cannot settle on an address for a different chain, which can strand funds. Always confirm the receiving wallet shows a USDT address on the exact network you selected before sending any Monero.</div></details>
-<details class="c4ccf6f"><summary class="c3b6c0b">Instant exchanger or centralized exchange for XMR to USDT?</summary><div class="c5f00e7">An instant exchanger is faster to start, needs no account, and is non-custodial. A centralized exchange offers an order book and a paper trail but requires identity verification and holds your funds, and increasingly delists Monero pairs.</div></details>
-  </main>
-  <section class="cb08258 c92e7cd" id="sources" aria-labelledby="sources-title">
-    <h2 class="c401b21" id="sources-title">Sources</h2>
-    <ul class="c5d15b0"><li><a class="c2a4177" href="https://www.getmonero.org/" rel="nofollow noopener" target="_blank">Monero project</a></li>
+<details class="c4ccf6f"><summary class="c3b6c0b">Instant exchanger or centralized exchange for XMR to USDT?</summary><div class="c5f00e7">An instant exchanger is faster to start, needs no account, and is non-custodial. A centralized exchange offers an order book and a paper trail but requires identity verification and holds your funds, and increasingly delists Monero pairs.</div></details></div>
+        </section>
+
+        <section class="c4a2e23" aria-labelledby="sources-title">
+          <h2 class="c12613e" id="sources-title">Sources &amp; further reading</h2>
+          <ul class="c5d15b0"><li><a class="c2a4177" href="https://www.getmonero.org/" rel="nofollow noopener" target="_blank">Monero project</a></li>
 <li><a class="c2a4177" href="https://tether.to/" rel="nofollow noopener" target="_blank">Tether (USDT) official site</a></li>
 <li><a class="c2a4177" href="https://www.coingecko.com/" rel="nofollow noopener" target="_blank">CoinGecko</a></li>
 <li><a class="c2a4177" href="https://tronscan.org/" rel="nofollow noopener" target="_blank">Tronscan (Tron explorer)</a></li>
 <li><a class="c2a4177" href="https://etherscan.io/" rel="nofollow noopener" target="_blank">Etherscan (Ethereum explorer)</a></li>
 <li><a class="c2a4177" href="https://academy.binance.com/" rel="nofollow noopener" target="_blank">Binance Academy</a></li></ul>
-  </section>
-  <footer class="ccf5b61">
-    <div class="cb34b0d c92e7cd">
-      <p>Updated Oct 12, 2026</p>
-      <a href="#top">Back to top ↑</a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="cdf21db">
+    <div class="c92e7cd cb34b0d">
+      <div class="cf87639"><span class="c3923d6">Website</span><p class="c469d1c">Updated Oct 14, 2026</p></div>
+      <a class="c336379" href="#top">Back to top <svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a>
     </div>
   </footer>
+
+  <aside class="c9e695a" aria-label="Continue to the dashboard" hidden>
+    <div class="c92e7cd c9674d5">
+      <div class="c0acc4d"><strong>Ready to go?</strong><span class="c7eddde">Put what you’ve learned into practice.</span></div>
+      <div class="c9e3bb3">
+        <a class="c5548a2" href="/dashboard/">Swap <span class="c62d17a" aria-hidden="true">→</span></a>
+        <button class="cd6d1c3" type="button" aria-label="Dismiss the bottom bar"><svg class="cfc6f28" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+  </aside>
+
   <script>
     (() => {
-      const TOKENS = [
-        { s: 'ETH', f: 'eth', p: 2550 }, { s: 'BTC', f: 'btc', p: 62000 },
-        { s: 'USDT', f: 'usdt', p: 1 }, { s: 'USDC', f: 'usdc', p: 1 },
-        { s: 'BNB', f: 'bnb', p: 585 }, { s: 'SOL', f: 'sol', p: 145 },
-        { s: 'ARB', f: 'arb', p: 0.62 }, { s: 'OP', f: 'optimism', p: 1.65 },
-        { s: 'MATIC', f: 'polygon', p: 0.42 }, { s: 'AVAX', f: 'avalanche', p: 27 },
-        { s: 'SUI', f: 'sui', p: 1.35 }, { s: 'LTC', f: 'ltc', p: 72 },
-        { s: 'TRX', f: 'trx', p: 0.16 }, { s: 'XMR', f: 'xmr', p: 155 },
-        { s: 'XRP', f: 'xrp', p: 0.52 }, { s: 'ZEC', f: 'zec', p: 32 }
-      ];
-      const FEE = 0.003;
-      const $ = (id) => document.getElementById(id);
-      const payAmt = $('pay-amount'), payTok = $('pay-token'), payUsd = $('pay-usd'), payIco = $('pay-ico');
-      const getAmt = $('get-amount'), getTok = $('get-token'), getUsd = $('get-usd'), getIco = $('get-ico');
-      const rateEl = $('swap-rate');
-      const tok = (s) => TOKENS.find((t) => t.s === s);
-      const num = (n) => new Intl.NumberFormat('en', { maximumFractionDigits: n >= 1 ? 4 : 6 }).format(n);
-      const usd = (v) => '~$' + new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
-      TOKENS.forEach((t) => {
-        [payTok, getTok].forEach((sel) => { const o = document.createElement('option'); o.value = t.s; o.textContent = t.s; sel.appendChild(o); });
+      'use strict';
+
+      const article = document.querySelector('.cab3d0c');
+      const toc = document.querySelector('.c334b78');
+      const list = document.querySelector('.cfb8e0c');
+      const hero = document.querySelector('.c5347f2');
+      const footer = document.querySelector('.cdf21db');
+      const bar = document.querySelector('.c9e695a');
+      const progress = document.querySelector('.c2feeb1');
+      const progressFill = progress.firstElementChild;
+      const mobile = window.matchMedia('(max-width: 900px)');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const headings = Array.from(article.querySelectorAll('h2.c12613e'))
+        .filter(heading => heading.getClientRects().length > 0);
+      const usedIds = new Set(Array.from(document.querySelectorAll('[id]'), node => node.id));
+      const links = [];
+      let activeIndex = -1;
+      let dismissed = false;
+      let framePending = false;
+      let positions = [];
+      let articleStart = 0;
+      let articleEnd = 0;
+      let heroEnd = 0;
+      let footerStart = 0;
+
+      headings.forEach((heading, index) => {
+        if (!heading.id) {
+          const slug = heading.textContent.trim().toLowerCase()
+            .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          const base = 'section-' + (slug || String(index + 1));
+          let id = base;
+          let suffix = 2;
+          while (usedIds.has(id)) id = base + '-' + suffix++;
+          heading.id = id;
+          usedIds.add(id);
+        }
+        heading.tabIndex = -1;
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        const number = document.createElement('span');
+        const label = document.createElement('span');
+        link.className = 'toc-link';
+        link.href = '#' + encodeURIComponent(heading.id);
+        number.className = 'toc-index';
+        number.setAttribute('aria-hidden', 'true');
+        number.textContent = String(index + 1).padStart(2, '0');
+        label.textContent = heading.textContent.trim();
+        link.append(number, label);
+        item.append(link);
+        list.append(item);
+        links.push(link);
+        link.addEventListener('click', event => navigate(event, heading));
       });
-      const widget = document.querySelector('.cac602c');
-      const defFrom = (widget && widget.dataset.from) || 'ETH';
-      const fromOk = TOKENS.some((t) => t.s === defFrom) ? defFrom : 'ETH';
-      payTok.value = fromOk;
-      getTok.value = (fromOk === 'USDT') ? 'ETH' : 'USDT';
-      const calc = () => {
-        const pf = tok(payTok.value), gt = tok(getTok.value);
-        payIco.src = 'assets/tokens/' + pf.f + '.svg'; payIco.alt = pf.s;
-        getIco.src = 'assets/tokens/' + gt.f + '.svg'; getIco.alt = gt.s;
-        rateEl.textContent = '1 ' + pf.s + ' ≈ ' + num(pf.p / gt.p) + ' ' + gt.s;
-        const a = parseFloat(payAmt.value);
-        if (!Number.isFinite(a) || a <= 0) { getAmt.textContent = '—'; payUsd.textContent = '—'; getUsd.textContent = '—'; return; }
-        const out = a * (pf.p / gt.p) * (1 - FEE);
-        getAmt.textContent = num(out) + ' ' + gt.s;
-        payUsd.textContent = usd(a * pf.p);
-        getUsd.textContent = usd(out * gt.p);
-      };
-      const distinct = (changed, other) => { if (changed.value === other.value) { other.value = (TOKENS.find((t) => t.s !== changed.value) || TOKENS[0]).s; } };
-      payAmt.addEventListener('input', calc);
-      payTok.addEventListener('change', () => { distinct(payTok, getTok); calc(); });
-      getTok.addEventListener('change', () => { distinct(getTok, payTok); calc(); });
-      $('swap-switch').addEventListener('click', () => { const t = payTok.value; payTok.value = getTok.value; getTok.value = t; calc(); });
-      calc();
+
+      if (headings.length) {
+        toc.hidden = false;
+        toc.open = !mobile.matches;
+      }
+      const syncToc = () => { toc.open = !mobile.matches; scheduleMeasure(); };
+      mobile.addEventListener('change', syncToc);
+
+      const jump = document.querySelector('[data-jump-steps]');
+      const contentHeadings = headings.filter(heading => heading.closest('#steps'));
+      const stepHeading = contentHeadings.find(heading =>
+        /\b(steps?|step-by-step|how to|walkthrough|getting started)\b/i.test(heading.textContent)
+      ) || contentHeadings.find(heading =>
+        heading.closest('.c91b39e')?.querySelector('ol, ul.steps, .steps > ul')
+      ) || contentHeadings[0];
+      if (stepHeading) {
+        jump.href = '#' + encodeURIComponent(stepHeading.id);
+        jump.addEventListener('click', event => navigate(event, stepHeading));
+      }
+
+      function navigate(event, target) {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        if (mobile.matches) toc.open = false;
+        const hash = '#' + encodeURIComponent(target.id);
+        if (window.location.hash !== hash) {
+          try { window.history.pushState(null, '', hash); }
+          catch (_) { window.location.hash = hash; }
+        }
+        target.focus({ preventScroll: true });
+        target.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
+        scheduleMeasure();
+      }
+
+      function measure() {
+        const scroll = window.scrollY;
+        positions = headings.map(heading => heading.getBoundingClientRect().top + scroll);
+        const bounds = article.getBoundingClientRect();
+        articleStart = bounds.top + scroll;
+        articleEnd = bounds.bottom + scroll;
+        heroEnd = hero.getBoundingClientRect().bottom + scroll;
+        footerStart = footer.getBoundingClientRect().top + scroll;
+        update();
+      }
+
+      function update() {
+        framePending = false;
+        const scroll = window.scrollY;
+        const viewport = window.innerHeight;
+        const readDistance = Math.max(1, articleEnd - articleStart - viewport);
+        const fraction = Math.min(1, Math.max(0, (scroll - articleStart) / readDistance));
+        progressFill.style.transform = 'scaleX(' + fraction + ')';
+
+        let next = -1;
+        const readingLine = scroll + Math.min(150, viewport * .24);
+        for (let index = 0; index < positions.length; index++) {
+          if (positions[index] <= readingLine) next = index;
+          else break;
+        }
+        if (scroll + viewport >= document.documentElement.scrollHeight - 2) next = headings.length - 1;
+        if (next !== activeIndex) {
+          if (activeIndex >= 0) links[activeIndex].removeAttribute('aria-current');
+          if (next >= 0) {
+            const link = links[next];
+            link.setAttribute('aria-current', 'location');
+            if (toc.open) {
+              const nav = document.querySelector('.c89b940');
+              const itemBounds = link.getBoundingClientRect();
+              const navBounds = nav.getBoundingClientRect();
+              if (itemBounds.top < navBounds.top || itemBounds.bottom > navBounds.bottom) {
+                nav.scrollTop += itemBounds.top - navBounds.top - nav.clientHeight / 2 + link.offsetHeight / 2;
+              }
+            }
+          }
+          activeIndex = next;
+        }
+
+        const shouldShow = !dismissed && scroll > heroEnd && scroll + viewport < footerStart + 16;
+        const keepFocus = !dismissed && bar.contains(document.activeElement);
+        const showBar = shouldShow || keepFocus;
+        if (bar.hidden === showBar) {
+          bar.hidden = !showBar;
+          document.body.classList.toggle('has-sticky-cta', showBar);
+        }
+      }
+
+      function scheduleUpdate() {
+        if (!framePending) {
+          framePending = true;
+          window.requestAnimationFrame(update);
+        }
+      }
+
+      let measurePending = false;
+      function scheduleMeasure() {
+        if (!measurePending) {
+          measurePending = true;
+          window.requestAnimationFrame(() => { measurePending = false; measure(); });
+        }
+      }
+
+      bar.querySelector('.cd6d1c3').addEventListener('click', () => {
+        dismissed = true;
+        const target = headings[Math.max(0, activeIndex)] || article;
+        target.focus({ preventScroll: true });
+        update();
+      });
+      bar.addEventListener('focusout', scheduleUpdate);
+      toc.addEventListener('toggle', scheduleMeasure);
+      article.addEventListener('toggle', scheduleMeasure, true);
+      window.addEventListener('scroll', scheduleUpdate, { passive: true });
+      window.addEventListener('resize', scheduleMeasure, { passive: true });
+      window.addEventListener('pageshow', scheduleMeasure);
+      if ('ResizeObserver' in window) {
+        const observer = new ResizeObserver(scheduleMeasure);
+        observer.observe(article);
+        observer.observe(hero);
+        observer.observe(document.querySelector('.c4a7ff7'));
+      }
+      if (document.fonts) document.fonts.ready.then(scheduleMeasure);
+
+      function restoreFragment() {
+        let id;
+        try { id = decodeURIComponent(window.location.hash.slice(1)); }
+        catch (_) { return; }
+        const target = document.getElementById(id);
+        if (target && headings.includes(target)) {
+          target.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
+        scheduleMeasure();
+      }
+      window.addEventListener('popstate', restoreFragment);
+      window.addEventListener('hashchange', restoreFragment);
+      progress.hidden = false;
+      measure();
+      if (window.location.hash) window.requestAnimationFrame(restoreFragment);
     })();
   </script>
 </body>
