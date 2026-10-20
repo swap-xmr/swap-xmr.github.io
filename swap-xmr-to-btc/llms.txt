@@ -1,3 +1,0 @@
-# Swap XMR to BTC
-
-Swap XMR to BTC non-custodially: instant exchangers vs atomic swaps, how rates and network fees work, and timing from Monero finality to BTC confirmations.

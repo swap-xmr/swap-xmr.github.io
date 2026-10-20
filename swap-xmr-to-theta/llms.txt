@@ -1,3 +1,0 @@
-# How to Swap XMR to Theta
-
-How to swap XMR to Theta when no direct pair exists: how instant exchangers route Monero to THETA, pick a route, get a wallet address, and handle fees.
